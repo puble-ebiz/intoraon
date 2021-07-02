@@ -1,0 +1,34 @@
+<!--메인팝업(숙박대전)-->
+<div class="popup-lodgment">
+    <div class="pop-wrap">
+        <div class="pop-contents">
+            <div class="img-box">
+                <img src="http://img.ocean2you.co.kr/renew/event/korea_sales_700.jpg" alt="이미지">
+            </div>
+            <button type="button" class="btn-close-pop">
+                <img src="http://img.ocean2you.co.kr/renew/event/etc/btn_close_pop_lodgment.jpg" alt="닫기">
+            </button>
+            <a href="http://ktostay.interpark.com" target="_blank" class="btn-go-event">
+                <img src="http://img.ocean2you.co.kr/renew/event/etc/btn_go_ev_lodgment.jpg" alt="가기">
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        //시작시
+        if($(".popup-lodgment").css("display") == "block"){
+            //바디고정
+            $("body").addClass("pop-overflow-hidden");
+        }
+
+        //팝업닫기
+        $(".popup-lodgment .btn-close-pop").on('click', function(){
+            $(".popup-lodgment").css("display","none");
+            //바디고정 해제
+            $("body").removeClass("pop-overflow-hidden");
+        });
+
+    });
+</script>
+<!--///메인팝업(숙박대전)-->

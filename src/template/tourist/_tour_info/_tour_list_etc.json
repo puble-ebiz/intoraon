@@ -1,0 +1,50 @@
+[
+{
+    "imgPath":"etc01.jpg",
+    "name":"정선5일장",
+    "time":"차량 20분 소요",
+    "distance":"(28km 거리)"
+},
+{
+    "imgPath":"etc02.jpg",
+    "name":"타임캡슐공원",
+    "time":"차량 35분 소요 ",
+    "distance":"(11km 거리)"
+},
+{
+    "imgPath":"etc03.jpg",
+    "name":"나리소 전망대",
+    "time":"차량 30분 소요",
+    "distance":"(20km 거리)"
+},
+{
+    "imgPath":"etc04.jpg",
+    "name":"아띠엔솔 카페",
+    "time":"차량 41분 소요",
+    "distance":"(11km 거리)"
+},
+{
+    "imgPath":"etc05.jpg",
+    "name":"장구목이골",
+    "time":"차량 40분 소요",
+    "distance":"(20km 거리)"
+},
+{
+    "imgPath":"etc06.jpg",
+    "name":"정선향토박물관",
+    "time":"차량 35분 소요",
+    "distance":"(22km 거리)"
+},
+{
+    "imgPath":"etc07.jpg",
+    "name":"단곡계곡",
+    "time":"차량 30분 소요",
+    "distance":"(14km 거리)"
+},
+{
+    "imgPath":"etc08.jpg",
+    "name":"하늘벽구름다리",
+    "time":"차량 32분 소요",
+    "distance":"(21km 거리)"
+}
+]

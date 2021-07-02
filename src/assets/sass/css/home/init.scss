@@ -1,0 +1,531 @@
+@charset 'utf-8';
+@import 'src/assets/sass/css/parts/common';
+
+// body.main {
+//     // background-color: $main-bg;
+// }
+
+@mixin ico-plus-cont($c: #000) {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+
+    .ico-wrap {
+        display: table;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin: 0 auto;
+        border: 1px solid $c;
+        border-radius: 50%;
+    }
+
+    .ico-container {
+        position: relative;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 0;
+        letter-spacing: 0;
+        line-height: 1;
+    }
+
+    .ico-body {
+        display: inline-block;
+        position: relative;
+        width: 12px;
+        height: 12px;
+    }
+
+    .ico-bar {
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0px;
+        top: 50%;
+        background: $c;
+    }
+
+    .ico-bar:first-child {
+        width: 100%;
+        transform: rotate(90deg);
+    }
+}
+
+.ico-plus-cont {
+    @include ico-plus-cont;
+
+    &.blue {
+        .ico-wrap {
+            border: 1px solid $fg-blue;
+        }
+
+        .ico-bar {
+            background: $fg-blue;
+        }
+    }
+
+    &.white {
+        .ico-wrap {
+            border: 1px solid #fff;
+        }
+
+        .ico-bar {
+            background: #fff;
+        }
+    }
+
+    &.theme {
+        .ico-wrap {
+            border: 1px solid $theme-color2;
+        }
+
+        .ico-bar {
+            background: $theme-color2;
+        }
+
+    }
+}
+
+@media (min-width: 992px) {
+    .notice-sec {
+        // margin-top: 40px;
+        padding: 40px 0;
+        background-color: #e6dacf;
+
+        .group {
+            background: #fff;
+            padding: 25px 35px;
+        }
+
+        .topic-wrap {
+            @include float;
+            // width:  715px;
+            width: 66%;
+
+            .topic-header {
+                .title {
+                    color: $fg-blue;
+                    font-size: 20px;
+
+                    .link {
+                        display: block;
+                    }
+
+                    .ico-sb {
+                        margin-left: 10px;
+                    }
+
+                    .sm {
+                        font-size: 15px;
+                    }
+
+                    .ico-plus-cont {
+                        @include float(right);
+                        top: 7px;
+                    }
+                }
+            }
+
+            .topic-body {
+                margin-top: 10px;
+
+                .bx-box {
+                    border: 1px solid #cacaca;
+
+                    // width: 714px;
+                    // height: 245px;
+                    .bx-wrapper {
+                        margin-bottom: 0;
+                    }
+
+                    .bx-s {
+                        .item {
+                            a {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //a href가 공백일때
+            .nope {
+                cursor: inherit;
+            }
+        }
+
+        .notice-wrap {
+            @include float;
+            width: 325px;
+            margin-left: 38px;
+
+            .notice-header {
+                .title {
+                    color: $fg-blue;
+                    font-size: 20px;
+
+                    .link {
+                        display: block;
+                    }
+
+                    .ico-plus-cont {
+                        @include float(right);
+                        top: 7px;
+                    }
+                }
+            }
+
+            .notice-body {
+                margin-top: 10px;
+
+                .notice-list {
+                    border-top: 1px solid #cacaca;
+                    max-height: 245px;
+
+                    >li {
+                        padding-top: 10px;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .sec-header-type1 {
+        text-align: center;
+        padding-top: 35px;
+
+        .title {
+            font-size: 28px;
+            color: #9e7351;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .subtitle {
+            margin: 0;
+            // margin-bottom: 5px;
+            font-size: 16px;
+            color: #525252;
+        }
+    }
+
+    .rooms-sec {
+        background-color: #fff;
+
+        .rooms-list {
+            position: relative;
+            position: relative;
+            // padding-left: 5px;
+            // padding-right: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .rooms-item {
+                width: calc(50% - 10px);
+                margin-top: 20px;
+
+                .link {
+                    .title {
+                        margin-top: 10px;
+                        letter-spacing: -0.5px;
+
+                        .lg,
+                        .sm {
+                            @include va;
+                            font-size: 20px;
+                        }
+
+                        .lg {
+                            color: $fg-blue;
+                        }
+
+                        .sm {
+                            margin-left: 10px;
+                        }
+
+                        .desc {
+                            font-size: 16px;
+                            color: #525252;
+                        }
+                    }
+
+                    .text {
+                        margin-top: 10px;
+                        font-size: 16px;
+                        color: #525252;
+                        letter-spacing: -0.5px;
+                    }
+
+                    .content {
+                        margin-top: 10px;
+                        border: 1px solid #9c9c9c;
+                    }
+                }
+            }
+        }
+
+        .rooms-wrap {
+            padding-bottom: 40px;
+
+        }
+
+        .facil-wrap {
+            padding-bottom: 40px;
+
+            .rooms-list {
+
+                .rooms-item {
+                    width: calc(25% - 10px);
+                }
+            }
+        }
+
+        .surroundings-content {
+            background-color: #f1f1f1;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .notice-sec {
+        .topic-wrap {
+            width: 66%;
+        }
+
+        .notice-wrap {
+            width: 265px;
+        }
+    }
+
+    .rooms-sec {
+        .group {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .facil-wrap {
+            .rooms-list {
+                .rooms-item {
+                    width: calc(50% - 10px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .notice-sec {
+        // margin-top: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: $main-bg;
+
+        .group {
+            background: #fff;
+            padding: 25px 35px;
+        }
+
+        .topic-wrap {
+            .topic-header {
+                .title {
+                    color: $fg-blue;
+                    font-size: 16px;
+
+                    .ico-sb {
+                        margin-left: 10px;
+                    }
+
+                    .sm {
+                        font-size: 15px;
+                    }
+
+                    .ico-plus-cont {
+                        @include float(right);
+                        top: 1px;
+
+                        .ico-wrap {
+                            @include sizes(18px)
+                        }
+
+                        .ico-body {
+                            @include sizes(10px)
+                        }
+                    }
+                }
+            }
+
+            .topic-body {
+                margin-top: 5px;
+                border-top: 1px solid #cacaca;
+
+                .title {
+                    padding: 10px 0;
+                    color: $fg-blue;
+                    font-size: 13px;
+                }
+
+                .bx-box {
+                    border: 1px solid #cacaca;
+
+                    .bx-wrapper {
+                        margin-bottom: 0;
+                    }
+
+                    .bx-s {
+                        .item {
+                            a {
+                                display: block;
+
+                                >img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .notice-wrap {
+            margin-top: 18px;
+
+            .notice-header {
+                .title {
+                    color: $fg-blue;
+                    font-size: 16px;
+
+                    .ico-plus-cont {
+                        @include float(right);
+                        top: 1px;
+
+                        .ico-wrap {
+                            @include sizes(18px)
+                        }
+
+                        .ico-body {
+                            @include sizes(10px)
+                        }
+                    }
+                }
+            }
+
+            .notice-body {
+                margin-top: 5px;
+
+                .notice-list {
+                    border-top: 1px solid #cacaca;
+
+                    >li {
+                        font-size: 13px;
+                        padding-top: 5px;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .sec-header-type1 {
+        text-align: center;
+        padding-top: 25px;
+
+        .title {
+            font-size: 24px;
+            color: #9e7351;
+            margin: 0;
+            font-weight: 500;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            margin: 0;
+            // margin-bottom: 5px;
+            font-size: 15px;
+            color: #525252;
+            letter-spacing: -1px;
+        }
+    }
+
+    .rooms-sec {
+        background-color: #fff;
+
+        .group {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .rooms-list {
+            position: relative;
+            position: relative;
+            // padding-left: 5px;
+            // padding-right: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .rooms-item {
+                width: calc(50% - 5px);
+                margin-top: 10px;
+
+                .link {
+                    .title {
+                        margin-top: 10px;
+                        letter-spacing: -0.5px;
+
+                        .lg,
+                        .sm {
+                            @include va;
+                            font-size: 15px;
+                            letter-spacing: -1px;
+                        }
+
+                        .lg {
+                            color: $fg-blue;
+                        }
+
+                        .sm {
+                            margin-left: 5px;
+                            font-size: 13px;
+                            letter-spacing: -1.5px;
+                        }
+
+                        .desc {
+                            font-size: 13px;
+                            color: #525252;
+                            letter-spacing: -1px;
+                        }
+                    }
+
+                    .text {
+                        margin-top: 10px;
+                        font-size: 15px;
+                        color: #525252;
+                        letter-spacing: -1px;
+                    }
+
+                    .content {
+                        margin-top: 10px;
+                        border: 1px solid #9c9c9c;
+                    }
+                }
+            }
+        }
+
+        .rooms-wrap {
+            padding-bottom: 20px;
+
+        }
+
+        .facil-wrap {
+            padding-bottom: 40px;
+        }
+
+        .surroundings-content {
+            background-color: #f1f1f1;
+        }
+    }
+}

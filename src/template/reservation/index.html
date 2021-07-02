@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="ko-KR" class="no-js ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html lang="ko-KR" class="no-js ie9 lt-ie10"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="ko-KR">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>인투라온호텔</title>
+    <meta name="title" content="인투라온호텔">
+    <meta name="description" content="">
+    <meta name="keywords" content="인투라온호텔">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="인투라온호텔">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://img.intoraon.co.kr/sample/sns_thumb.jpg">
+
+    <!--폰트-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap" rel="stylesheet">
+
+    <!--공통 Css-->
+    <link rel=stylesheet href="http://static.intoraon.co.kr/goco/css/reset.css">
+    <link rel=stylesheet href="http://static.intoraon.co.kr/goco/css/common.css">
+    <link rel=stylesheet href="http://static.ocean2you.co.kr/css/new/swiper.min.css">
+
+    <!--개별 Css-->
+    <link rel=stylesheet href="http://static.intoraon.co.kr/goco/css/reservation/init.css">
+    <link rel="stylesheet" href="static/css/new/layout2.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/detectizr/1.5.0/detectizr.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        Modernizr.Detectizr.detect();
+
+        var base_url = "intoraon.co.kr";
+        var base_url2 = "intoraon.co.kr";
+    </script>
+
+    <!--공통 Js-->
+    <script src="http://static.intoraon.co.kr/goco/js/common.js"></script>
+    <script src="http://static.ocean2you.co.kr/js/new/swiper.min.js"></script>
+    <!--개별 Js-->
+    <script src="http://static.intoraon.co.kr/goco/js/reservation/init.js"></script>
+    <script src="http://static.ocean2you.co.kr/js/new/jwSlide_ver2.js"></script>
+    <script src="http://static.ocean2you.co.kr/js/new/picker_pc.js"></script>
+    <script src="http://static.ocean2you.co.kr/js/new/reserve_pc.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://static.hotelairsky.co.kr/svc/css/reserve.footer.css">
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+    <script>
+        function button_count(pno, bt_type) {
+            $.ajax({
+                url: "../reservation/state.php",
+                type: "post",
+                data: "mode=bt_count&pno=" + pno + "&bt_type=" + bt_type,
+                success: function (e) {
+
+                }
+            });
+        }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="http://static.ocean2you.co.kr/css/new/reset.css">
+    <link rel="stylesheet" type="text/css" href="http://static.ocean2you.co.kr/css/new/layout2.css">
+    <link rel="stylesheet" href="//static.go.co.kr/css/totalweb.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://static.ocean2you.co.kr/css/layout_init.css">
+
+    <script type="text/javascript" src="http://static.ocean2you.co.kr/js/new/jquery.cookie.js"></script>
+    <script type="text/javascript" src="http://static.ocean2you.co.kr/js/new/jquery.number.min.js"></script>
+
+</head>
+
+<body class="page-reservation">
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="gnb">
+                <div class="group inner">
+                    <h1 class="logo">
+                        <a href="http://intoraon.co.kr">
+                            <img src="http://img.intoraon.co.kr/goco/common/logo_rsv.jpg" alt="인투라온호텔"
+                                style="display:none;">
+                            <em style="line-height:60px;">인투라온호텔</em>
+                        </a>
+                    </h1>
+                    <nav class="g-nav">
+                        <ul class="menu cf">
+                            <li class="c-blue">
+                                <a href="/reserve"><img src="http://img.intoraon.co.kr/goco/common/icon/rsv.png"
+                                        alt="예약"> <span>예약하기</span></a>
+                            </li>
+                            <li class="c-blue">
+                                <a href="/history/?dd=Sws5TzdVKg==">
+                                    <img src="http://img.intoraon.co.kr/goco/common/icon/search.png" alt="검색">
+                                    <span>예약확인</span>
+                                </a>
+                            </li>
+                            <li class="c-blue">
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="call-bar">
+                <div class="group inner">
+                    <img src="http://img.intoraon.co.kr/goco/common/icon/call.png" alt="전화">
+                    <span class="tt">예약문의</span>
+                    <span class="t">1666-1243</span>
+                </div>
+            </div>
+        </header>
+        <!-- /.header -->
+
+        <div class="contents reservation">
+        </div>
+        <!--//.contents-->
+        <section id="setTop">
+            <div id="wrapper">
+                <div id="container">
+                    <!-- 2021.06.30 margin-bottom:50px로 지정 -->
+                    <div id="wrapper1" class="noover" style="margin-top:10px;margin-bottom:50px">
+                        <form name="prev" method="post" id="prev"
+                            action="http://intoraon.co.kr/reservation/preserve_nlogin.php?md=Wxs0VixI">
+                            <input type='hidden' name='fval_s' value='' /><input type='hidden' name='p_no'
+                                value='358948' /><input type='hidden' name='gubun' value='R' /><input type='hidden'
+                                name='res_type2' value='' /><input type='hidden' name='abr_val' value='' /><input
+                                type='hidden' name='rent_option' value='' /><input type='hidden' name='sang'
+                                value='744902' /><input type='hidden' name='hseldate' value='2021-06-30' /><input
+                                type='hidden' name='night' value='1' /><input type='hidden' name='nseldate'
+                                value='2021-07-01' /><input type='hidden' name='room_cnt' value='1' /><input
+                                type='hidden' name='person' value='1' /><input type='hidden' name='final_price'
+                                value='49900' /><input type='hidden' name='normal_price' value='49900' /><input
+                                type='hidden' name='deposit_price' value='49900' /><input type='hidden'
+                                name='show_price' value='51300' /><input type="hidden" name="prev" value="true" />
+                        </form>
+                        <script>
+                            document.domain = "intoraon.co.kr";
+                            window.name = "reservation_02";
+                        </script>
+
+                        <input type="hidden" id="_mgubun" name="_mgubun" value="member" />
+                        <input type="hidden" id="_first" name="_first" value="" />
+
+                        <input type="hidden" name="coupon_hidden" id="coupon_hidden" />
+                        <input type="hidden" name="coupon_price" id="coupon_price" />
+                        <input type="hidden" name="mile_price" id="mile_price" />
+
+                        <input type="hidden" id="_uflag" name="_uflag" value="web" />
+                        <input type="hidden" id="_res_type2" name="_res_type2" value="" />
+
+                        <form name="rent_fix" method="post" id="rent_fix">
+                            <input type="hidden" name="estring" id="estring"
+                                value="eyJmdmFsX3MiOiIiLCJwX25vIjoiMzU4OTQ4IiwiZ3VidW4iOiJSIiwicmVzX3R5cGUyIjoiIiwiYWJyX3ZhbCI6IiIsInJlbnRfb3B0aW9uIjoiIiwic2FuZyI6Ijc0NDkwMiIsImhzZWxkYXRlIjoiMjAyMS0wNi0zMCIsIm5pZ2h0IjoiMSIsIm5zZWxkYXRlIjoiMjAyMS0wNy0wMSIsInJvb21fY250IjoiMSIsInBlcnNvbiI6IjEiLCJmaW5hbF9wcmljZSI6IjQ5OTAwIiwibm9ybWFsX3ByaWNlIjoiNDk5MDAiLCJkZXBvc2l0X3ByaWNlIjoiNDk5MDAiLCJzaG93X3ByaWNlIjoiNTEzMDAifQ==" />
+                            <input type="hidden" name="payid" value="aW50b3Jhb24yMDIxMDYzMDA5NDAxOTEzODU1" />
+                            <input type="hidden" name="pid" value="intoraon_home" />
+
+                            <input type="hidden" name="ad1" value="X" />
+                            <input type="hidden" name="ad2" value="X" />
+
+                            <input type="hidden" name="mode" id="mode" value="reserve_final" />
+                            <input type="hidden" name="money" id="money" value="49,900" />
+                            <input type="hidden" name="user_flag" value="W" />
+                            <input type="hidden" name="res_type" value="INTORAON" />
+
+                            <!--- 회원이라면 아이디 --->
+                            <input type="hidden" name="userid" value="sunhee5839@naver.com" />
+                            <input type="hidden" name="mcinfo" id="mcinfo" />
+                            <input type="hidden" name="use_mile" id="use_mile" />
+                            <input type="hidden" name="use_coupon" id="use_coupon" />
+                            <input type="hidden" name="mc_price" id="mc_price" />
+
+
+                            <input type="hidden" name="hotel_name" value="정선인투라온호텔" />
+                            <input type="hidden" name="pname" value="슈페리어1인실(랜덤배정)" />
+
+
+                            <!-- 통합시설변경 -->
+                            <input type="hidden" name="pno_arr" value="" />
+
+                            <!-- 결제창 정보 -->
+                            <!-- 2021.06.30 -->
+                            <!-- 아이디 reserLeft태그 삭제 -->
+                            <!-- <div id="reserLeft"> -->
+                            <!-- reser_check의 style 삭제 -->
+                            <div id="reser_check">
+                                <!-- popup: 할인 -->
+                                <div id="pay_discount_pop"
+                                    style="margin: auto; display: none; position: fixed; z-index: 999;">
+                                    <h3>- 쿠폰 할인
+                                    </h3>
+                                    <table>
+                                        <colgroup>
+                                            <col width="165">
+                                            <col width="280">
+                                        </colgroup>
+                                        <tr>
+                                            <th>사용할 수 있는 쿠폰</th>
+                                            <td>
+
+                                                <select name="my_coupon" class="select" id="my_coupon"
+                                                    style="width: 200px" onchange="coupon_chk($(this).val())">
+                                                    <option value="" selected="selected">쿠폰을 선택하세요</option>
+                                                    <option value="G0t5E2webhZ5">앱전용 11000원 쿠폰</option>
+                                                    <option value="G0t5E2webhZ4">앱전용 9000원 쿠폰</option>
+                                                    <option value="G0t5E2webhZ3">앱전용 8000원 쿠폰</option>
+                                                    <option value="G0t5E2webhVw">앱전용 6000원 쿠폰</option>
+                                                    <option value="G0t5E2webhVx">앱전용 6000원 쿠폰</option>
+                                                    <option value="G0t5E2webhZ1">앱전용 5000원 쿠폰</option>
+                                                    <option value="G0t5E2webhZ2">앱전용 5000원 쿠폰</option>
+                                                    <option value="G0t5E2webhZz">앱전용 4000원 쿠폰</option>
+                                                    <option value="G0t5E2webhZ0">앱전용 4000원 쿠폰</option>
+                                                    <option value="G0t5E2webhZx">앱전용 2500원 쿠폰</option>
+                                                    <option value="G0t5E2webhZy">앱전용 2500원 쿠폰</option>
+                                                    <option value="G0t5E2webhd5">앱전용 1500원 쿠폰</option>
+                                                    <option value="G0t5E2webhZw">앱전용 1500원 쿠폰</option>
+                                                    <option value="G0t5E2webhd3">앱전용 1000원 쿠폰</option>
+                                                    <option value="G0t5E2webhd4">앱전용 1000원 쿠폰</option>
+                                                    <option value="G0t5E2webhd1">앱전용 500원 쿠폰</option>
+                                                    <option value="G0t5E2webhd2">앱전용 500원 쿠폰</option>
+                                                    <option value="G0t5E2webhdz">앱전용 500원 쿠폰</option>
+                                                    <option value="G0t5E2webhd0">앱전용 500원 쿠폰</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>쿠폰 할인금액</th>
+                                            <td><span class="dis" id="after_coupon">0</span>원</td>
+                                        </tr>
+                                    </table>
+
+
+                                    <h3>- 적립금 할인</h3>
+                                    <table>
+                                        <colgroup>
+                                            <col width="165">
+                                            <col width="280">
+                                        </colgroup>
+                                        <tr>
+                                            <th>보유 적립금</th>
+                                            <td><span class="dis">0</span>원</td>
+                                        </tr>
+                                        <tr>
+                                            <th>이용금액</th>
+                                            <td>
+
+                                                <input name="use_mileage" title="이용금액" id="use_mileage" type="text"
+                                                    maxlength="15" value="0" class="input"
+                                                    style="width:60px;text-align:right" disabled
+                                                    onkeyup="util.checktype('number', 'use_mileage');" />원
+                                                <input type="checkbox" name="all_mile" id="all_mile" /><label
+                                                    for="all_mile">전액사용</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>잔여 적립금</th>
+                                            <td><span class="dis" id="after_mile">0</span>원</td>
+                                        </tr>
+                                    </table>
+
+
+                                    <h3>- 계산결과</h3>
+                                    <table style="margin-bottom:10px">
+                                        <colgroup>
+                                            <col width="165">
+                                            <col width="280">
+                                        </colgroup>
+                                        <tr>
+                                            <th>총 이용금액</th>
+                                            <td><span class="pri">49,900</span>원</td>
+                                        </tr>
+                                        <tr>
+                                            <th>적립금/쿠폰 할인금액</th>
+                                            <td><span class="dis"><span id="discount_price">0</span></span>원</td>
+                                        </tr>
+                                        <tr>
+                                            <th>실제 결제금액</th>
+                                            <td><span class="dis" id="final_price2">49,900</span>원</td>
+                                        </tr>
+                                    </table>
+
+
+                                    <div class="btn">
+                                        <a href="javascript:mc_setting('N');"><img src="//img.go.co.kr/btn_x3.jpg"
+                                                alt="닫기" /><a>
+                                                <a href="javascript:mc_setting('Y');"><img
+                                                        src="//img.go.co.kr/btn_ok6.jpg" alt="할인적용" /><a>
+                                    </div>
+                                </div>
+                                <!-- //popup: 할인 -->
+                                <input type="hidden" name="mile_price" id="mile_price" />
+                                <input type="hidden" name="pay_type_tmp" id="pay_type_tmp" />
+                                <input type="hidden" name="mcinfo_hidden" id="mcinfo_hidden" />
+                                <input type="hidden" name="mcprice_hidden" id="mcprice_hidden" />
+                                <script type="text/javascript">
+                                    var money = $("#money").val();	// 쿠폰, 적립금 사용 전 최종 결제 금액(ex: 94,000)
+                                    var prev_paytype = "";
+                                    $(function () {
+
+                                        $("#use_mileage").number(true);
+                                        $("#coupon_count").text("19");
+
+
+                                        // 적립금 전액사용
+                                        $("#all_mile").click(function () {
+
+                                            if ($(this).is(":checked") == true) {
+                                                var mem_mile = "0";
+                                                var prev_money = "49900";
+
+
+                                                if ($("#use_coupon").val() == "Y") {
+                                                    var coupon_pirce = $("#coupon_price").val();
+                                                } else {
+                                                    var coupon_pirce = 0;
+                                                }
+
+                                                var result = parseInt(prev_money) - parseInt(coupon_pirce);
+
+                                                if (parseInt(mem_mile) > parseInt(result)) {
+                                                    $("#use_mileage").val(result);
+                                                } else {
+                                                    $("#use_mileage").val(mem_mile);
+                                                }
+
+
+                                            } else {
+                                                $("#use_mileage").val(0);
+                                            }
+
+                                            var imile = $("#use_mileage").val();
+                                            $.ajax({
+                                                type: "post",
+                                                url: "/reservation/inc/state_discount.php",
+                                                data: "mode=mc_calc&imile=" + imile + "&final_price=" + money,
+                                                cache: false,
+                                                success: function (e) {
+                                                    var res = e.split("||");
+
+                                                    if (res[0] == "N") {
+                                                        alert(res[1]);
+                                                        $("#use_mileage").val("0");
+                                                        $("#mile_price").val("0");
+                                                        $("#use_mile").val("N");
+                                                        return;
+                                                    } else {
+                                                        $("#mile_price").val(res[1]);
+                                                        if (imile != "0" && imile != "") {
+                                                            $("#use_mile").val("Y");
+                                                        } else {
+                                                            $("#use_mile").val("N");
+                                                        }
+                                                    }
+                                                },
+                                                complete: function () {
+                                                    total_calc();
+                                                }
+                                            });
+
+                                        });
+
+                                        // 적립금 숫자 입력 시
+                                        $("#use_mileage").bind("keyup input", function (e) {
+                                            var imile = $("#use_mileage").val();
+                                            var fp_price = $("#money").val();
+
+                                            $.ajax({
+                                                type: "post",
+                                                url: "/reservation/inc/state_discount.php",
+                                                data: "mode=mc_calc&imile=" + imile + "&final_price=" + fp_price + "&coupon=" + $("#coupon_hidden").val(),
+                                                cache: false,
+                                                success: function (e) {
+                                                    var res = e.split("||");
+                                                    if (res[0] == "N") {
+                                                        alert(res[1]);
+                                                        $("#use_mileage").val("0");
+                                                        $("#mile_price").val("0");
+                                                        $("#use_mile").val("N");
+                                                        total_calc();
+                                                        return;
+                                                    } else {
+                                                        $("#mile_price").val(res[1]);
+
+                                                        if (imile != "0" && imile != "") {
+                                                            $("#use_mile").val("Y");
+                                                        } else {
+                                                            $("#use_mile").val("N");
+                                                        }
+
+                                                        $("#all_mile").attr("checked", false);
+                                                        total_calc();
+                                                    }
+                                                }
+                                            });
+                                        });
+
+                                    });
+
+
+                                    // 최종 쿠폰, 적립금 통합 결제금액 계산
+                                    function total_calc() {
+
+                                        var imile = $("#mile_price").val(); // 적립금
+                                        var coupon = $("#coupon_hidden").val(); // 쿠폰 아이디
+                                        var coupon_price = $("#coupon_price").val(); // 쿠폰 금액
+
+                                        $.ajax({
+                                            type: "post",
+                                            url: "/reservation/inc/state_discount.php",
+                                            data: "mode=total_mc_calc&imile=" + imile + "&final_price=" + money + "&coupon=" + coupon + "&coupon_price=" + coupon_price,
+                                            cache: false,
+                                            success: function (e) {
+                                                var res = e.split("||");
+
+
+                                                if (parseInt(res[1]) == 0 || parseInt(res[1]) >= 1000) {
+                                                    $("#final_price2").text(number_format(res[1])); //실제결제금액
+
+                                                    $("#mcprice_hidden").val(res[1]);
+                                                    $("#mcinfo_hidden").val(res[2]);
+
+                                                    if (res[3] == "Y" || res[3] == "Y2") {
+                                                        $(".hide_mile").hide();
+                                                        /*
+                                                        prev_paytype = $("#pay_type_tmp").val();
+                                    
+                                                        if(res[3] == "Y") {
+                                                            $("#pay_type_tmp").val("mileage");
+                                                        } else { 
+                                                            $("#pay_type_tmp").val("coumile");
+                                                        } */
+                                                    } else {
+                                                        $(".hide_mile").show();
+                                                        //$("#pay_type_tmp").val(prev_paytype);
+                                                    }
+
+                                                    if (coupon_price == "") {
+                                                        coupon_price = 0;
+                                                    }
+
+                                                    if (imile == "") {
+                                                        imile = 0;
+                                                    }
+
+                                                    var total_dis = parseInt(coupon_price) + parseInt(imile);
+                                                    $("#discount_price").text(number_format(total_dis));
+
+
+                                                } else {
+
+                                                    if (parseInt(res[1]) < 0) {
+                                                        alert("0원 이하로 결제할수없습니다.");
+                                                    } else if (parseInt(res[1]) < 1000) {
+                                                        alert("최소 결제금액은 1,000원 이상입니다.");
+                                                    }
+
+                                                    // 쿠폰초기화
+                                                    $("#coupon_hidden").val("");
+                                                    $("#coupon_price").val("");
+                                                    $("#use_coupon").val("N");
+                                                    $("#my_coupon").val('');
+
+                                                    // 적립금 초기화
+                                                    $("#use_mileage").val("0");
+                                                    $("#mile_price").val("0");
+                                                    $("#use_mile").val("N");
+                                                    $("#all_mile").attr("checked", false);
+
+                                                    //최종결제금액 초기화
+                                                    $("#final_price2").text($("#money").val());
+                                                    $("#mcprice_hidden").val("49900");
+                                                    $("#mcinfo_hidden").val("");
+
+
+                                                }
+                                            }
+                                        });
+                                    }
+
+
+                                    // 쿠폰 선택 시
+                                    function coupon_chk(cid) {
+
+                                        var imile = $("#use_mileage").val();
+
+                                        $.ajax({
+                                            type: "post",
+                                            url: "/reservation/inc/state_discount.php",
+                                            data: "mode=coupon_calc&imile=" + imile + "&final_price=" + money + "&coupon=" + cid + "&p_no=358948",
+                                            cache: false,
+                                            success: function (e) {
+                                                var res = e.split("||");
+                                                var prev_price = $("#mc_price").val();
+
+                                                if (res[0] == "N2" || parseInt(prev_price) < parseInt(res[0])) {
+                                                    if (res[0] == "N2") {
+                                                        alert(res[1]);
+
+                                                    } else {
+                                                        alert("사용하려는 쿠폰금액이 최종 결제금액보다 많습니다.");
+                                                    }
+
+                                                    $("#coupon_hidden").val("");
+                                                    $("#coupon_price").val("");
+                                                    $("#use_coupon").val("N");
+                                                    $("#coupon_can").hide();
+
+                                                    $("#my_coupon").val('');
+
+                                                    total_calc();
+                                                    return;
+
+                                                } else {
+                                                    $("#coupon_price").val(res[0]);
+                                                    $("#coupon_hidden").val(res[1]);
+                                                    $("#use_coupon").val("Y");
+                                                    $("#after_coupon").text(number_format(res[0]));
+
+                                                    total_calc();
+                                                }
+
+                                            }
+                                        });
+                                    }
+
+
+
+                                    function mc_setting(st) {
+
+                                        if (st == "Y") {
+
+                                            $("#mcinfo").val($("#mcinfo_hidden").val());
+                                            $("#mc_price").val($("#mcprice_hidden").val());
+                                            var imile = $("#use_mileage").val();
+
+                                            //적립 할인내역
+                                            if (imile == "") {
+                                                $("#final_mile").text("0");
+                                            } else {
+                                                $("#final_mile").text(number_format(imile));
+                                            }
+
+                                            //쿠폰할인금액
+                                            $("#final_coup").text($("#after_coupon").text());
+
+                                            //실제결제금액
+                                            $("#final_p1").text($("#final_price2").text());
+                                            $("#final_p2").text($("#final_price2").text());
+
+                                            if (imile != "0" && imile != "") {
+                                                $("#use_mile").val("Y");
+                                            } else {
+                                                $("#use_mile").val("N");
+                                            }
+
+                                            if ($("#my_coupon").val() != "") {
+                                                $("#use_coupon").val("Y");
+                                            } else {
+                                                $("#use_coupon").val("N");
+                                            }
+
+                                            if ($("#my_coupon").val() != "" && imile != "0" && imile != "") {
+                                                var paytype_tmp = "coumile";
+                                            } else if (imile != "0" && imile != "") {
+                                                var paytype_tmp = "mileage";
+                                            } else {
+                                                var paytype_tmp = "";
+                                            }
+
+                                            var chk_price = parseInt($("#mc_price").val());
+                                            if (chk_price == 0 && paytype_tmp != "") {
+                                                $("<input/>").attr({ type: "hidden", name: "pay_type", id: "pay_" + paytype_tmp }).val(paytype_tmp).appendTo($("form[name='rent_fix']"));
+                                            } else {
+                                                $("#pay_mileage").remove();
+                                                $("#pay_coumile").remove();
+                                            }
+
+                                            util.out('#pay_discount_pop');
+
+                                        } else {
+
+                                            /*
+                                            // 쿠폰초기화
+                                            $("#coupon_hidden").val("");
+                                            $("#coupon_price").val("");
+                                            $("#use_coupon").val("N");
+                                            $("#my_coupon").val('');
+                                    
+                                            // 적립금 초기화
+                                            $("#use_mileage").val("0");
+                                            $("#mile_price").val("0");
+                                            $("#use_mile").val("N");
+                                            $("#all_mile").attr("checked", false);
+                                        	
+                                            //최종결제금액 초기화
+                                            $("#final_price2").text($("#money").val());
+                                            $("#mc_price").val("49900");
+                                            $("#mcinfo").val("");		
+                                    
+                                            $("#discount_price").text("0");
+                                            $("#after_coupon").text("0");
+                                            */
+
+                                            if ($("#final_mile").text() == 0) {
+                                                $("#use_mile").val("N");
+                                            }
+
+                                            if ($("#final_coup").text() == 0) {
+                                                $("#use_coupon").val("N");
+                                            }
+
+                                            util.out('#pay_discount_pop');
+                                        }
+                                    }
+
+                                </script>
+                                <!-- 객실정보 -->
+                                <div class="goods_box">
+                                    <!-- 선택한 객실상품 -->
+                                    <div class="goods_img_box">
+                                        <ul>
+                                            <li class="goods_Simg"><img
+                                                    src="http://file.tournspa.co.kr/tour/img3/1606444406_main1.jpg"
+                                                    width="92" height="80" /></li>
+                                            <li class="goods_tit_txt">정선인투라온호텔<p>- 슈페리어1인실(랜덤배정)</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //선택한 객실상품 -->
+                                    <!-- 체크인아웃 시간 -->
+                                    <div class="check-inOut clr">
+                                        <ul>
+                                            <li class="check_In_date">
+                                                <ul>
+                                                    <li class="c_tit">체크인</li>
+                                                    <li class="c_date">2021-06-30</li>
+                                                    <li class="c_time">이후</li>
+                                                </ul>
+                                            </li>
+                                            <li class="arrow">
+                                                <img src="http://img.ocean2you.co.kr/go/check_inOut_arrow.png" />
+                                            </li>
+                                            <li class="check_Out_date">
+                                                <ul>
+                                                    <li class="c_tit">체크아웃</li>
+                                                    <li class="c_date">2021-07-01</li>
+                                                    <li class="c_time">이전</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //체크인아웃 시간 -->
+                                    <!-- 객실 정보 -->
+                                    <div class="room_check" style="height:auto">
+                                        <ul>
+                                            <li class="left_check">객실</li>
+                                            <li class="right_check">1박/1명</li>
+                                            <li class="left_check">기준인원</li>
+                                            <li class="right_check">1명/최대 1명</li>
+                                        </ul>
+                                        <p>*기준인원 초과시 인원추가 비용 현장 결제</p>
+                                    </div>
+                                    <!-- //객실 정보 -->
+                                </div>
+                                <!-- //객실정보 -->
+                                <p class="clr"></p>
+
+                                <!--- 패키지내용 신규버전 --->
+                                <!-- 객실가격 -->
+                                <table class="receipt">
+                                    <colgroup>
+                                        <col width="110">
+                                        <col width="80">
+                                        <col width="114">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="line">
+                                            <th class="p_l_10" height="40" colspan="2"><span class="tit">이용요금</span>
+                                            </th>
+                                            <td class="p_r_10"><span class="tit">49,900원</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="receipt receipt_margin">
+                                    <colgroup>
+                                        <col width="110">
+                                        <col width="90">
+                                        <col width="104">
+                                    </colgroup>
+                                    <tr>
+                                        <td height="5" colspan="3" style="text-align:center"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="p_l_10" height="40"><span class="tit">최종 결제금액</span></th>
+                                        <td class="p_r_10" colspan="2"><span class="total"
+                                                id="final_p2">49,900</span><span class="total_won">원</span><br /><span
+                                                class="comment">(VAT,봉사료,예약수수료
+                                                포함)</span></td>
+                                    </tr>
+                                </table>
+                                <div class="payment_Btn" style="cursor:pointer">
+                                    <input type="button" value="결제하기"
+                                        onclick="$('#reserve_name').val($('#stayname').val());rsv.final_chk('358948', 'pay');button_count('358948', 'pay');"
+                                        style="cursor:pointer" />
+                                </div>
+                                <!-- 2021.06.30 약관동의 추가 -->
+                                <div class="tos">
+                                    <ul class="check-list">
+                                        <li>
+                                            <input type="checkbox" id="check_all">
+                                            <label for="check_all">전체 약관 동의</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="check_1" class="normal">
+                                            <label for="check_1">숙소 이용규칙 동의 및 취소, 환불규정 동의
+                                                <span>(필수)</span>
+                                            </label>
+                                            <button class="btn-more">보기</button>
+
+                                            <!-- 약관 팝업 -->
+                                            <div class="agree-view">
+                                                <div class="view-box">
+                                                    <h3>숙소이용규칙 및 취소/환불규정 동의(필수)</h3>
+                                                    <div class="text">
+                                                        <p class="tit">숙소이용규칙</p>
+                                                        <ul>
+                                                            <li>최대 인원 초과 시 입실 불가하며, 정원 기준 요금 외 인원 추가 요금은 현장결제입니다.</li>
+                                                            <li>제공 정보는 숙소의 사정에 따라 변경될 수 있습니다.</li>
+                                                            <li>미성년자는 보호자의 동반 시 투숙이 가능합니다.</li>
+                                                            <li>체크인 시 배정의 경우, 객실과 베드타입을 보장하지 않습니다.</li>
+                                                            <li>조식, 인원, 침구, 침대 등 추가는 예약하신 숙소로 요청 및 결제 가능합니다.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p class="tit">취소/환불규정</p>
+                                                        <ul>
+                                                            <li>속소 사정에 의해 취소 발생 시 100% 환불이 가능합니다.</li>
+                                                            <li>예약 상품 별 숙소 정보에 기재된 취소, 환불 규정으로 반드시 확인 후 이용해주시기 바랍니다.
+                                                            </li>
+                                                            <li>예약 이후의 취소는 취소/환불 규정에 의거하여 적용됩니다.</li>
+                                                            <li>당일 결제를 포함한 체크인 당일 취소는 취소 변경이 불가능합니다.</li>
+
+                                                            <li class="notice">결제가 된 순간부터, 예약접수가 진행됨에 따라, 확정을 받기 전일지라도
+                                                                위약금 발생될수 있으니 이점 참고바랍니다.<br>
+                                                                (취소문의는 일대일문의통해 접수가능)
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <table class="table-agree">
+                                                        <caption>취소/환불규정 표</caption>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th style="width:40%">구분</th>
+                                                                <th style="width:30%">취소수수료율</th>
+                                                                <th style="width:30%">환불액</th>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>이용일 기준 15일전</td>
+                                                                <td>10%</td>
+                                                                <td>90% 환불</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>이용일 기준 14~10일전</td>
+                                                                <td>20%</td>
+                                                                <td>80% 환불</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>이용일 기준 9~7일전</td>
+                                                                <td>40%</td>
+                                                                <td>60% 환불</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>이용일 기준 6일전</td>
+                                                                <td>70%</td>
+                                                                <td>30% 환불</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>이용일 기준 5일전~당일</td>
+                                                                <td>100%</td>
+                                                                <td>0% 환불</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <button class="btn-close">닫기버튼</button>
+                                                </div>
+                                            </div>
+                                            <!-- //약관 팝업 -->
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="check_2" class="normal">
+                                            <label for="check_2">개인정보 수집 및 이용 동의
+                                                <span>(필수)</span>
+                                            </label>
+                                            <button class="btn-more">보기</button>
+
+                                            <!-- 약관 팝업 -->
+                                            <div class="agree-view">
+                                                <div class="view-box">
+                                                    <h3>개인정보 수집 및 이용 동의(필수)</h3>
+                                                    <div class="text">
+                                                        <p class="tit">개인정보 수집 및 이용목적</p>
+                                                        <p class="info">
+                                                            <strong>1. 예약 및 결제 서비스 제공</strong>
+                                                            본 예약 서비스는 주식회사 이비즈네트웍스(이하 '회사'라 합니다)가 제공하는<br> 고코투어 예약 시스템에서
+                                                            제공받고 있습니다. 회사가 제공하는 전자상거래 서비스 이용과 관련하여,<br>
+                                                            서비스 이용을 위한 본인 확인, 예약 및 결제, 예약 취소
+                                                            및 노쇼 시 대금 지급 요청, 서비스 부정 이용 방지,<br> 각종 불편 사항 접수 및 분쟁 조정을 위해
+                                                            필요한 이용자의 최소한의 개인정보를 수집합니다.<br>
+                                                            개인정보를 수집할 경우에는 해당 개인정보 수집 시점에서 이용자에게 ‘수집하는 개인정보
+                                                            항목,<br>
+                                                            개인정보의 수집 및 이용목적, 개인정보의 보관기간’에 대해 안내 드리고 동의를 받습니다.
+                                                        </p>
+                                                        <p class="info">
+                                                            <strong>2. 서비스 마케팅 활용</strong>
+                                                            광고 게재, 이벤트 정보 및 참여기회 제공 등의 서비스 마케팅 활용을 위해 수집된 개인정보가<br> 활용 될
+                                                            수
+                                                            있습니다.
+                                                        </p>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p class="tit">개인정보 수집 및 이용기간</p>
+                                                        <p class="info">
+                                                            회사는 원칙적으로 이용자의 개인정보를 회원 탈퇴 시 지체없이 파기하고 있습니다.<br>
+                                                            단, 이용자에게 개인정보 보관기간에 대해 별도의 동의를 얻은 경우, 또는 법령에서 일정 기간<br> 정보보관
+                                                            의무를
+                                                            부과하는
+                                                            경우에는 해당 기간 동안 개인정보를 안전하게 보관합니다.
+                                                            <br>
+                                                            ※ 위 개인정보 수집, 이용에 대한 동의를 거부할 수 있으며, 거부할 경우 서비스 이용이 제한됩니다.
+                                                            <br>
+                                                            1. 개인정보 수집항목: 이름, 이메일주소, 연락처(휴대폰번호), 예약객실명, 결제금액,<br>
+                                                            신용카드번호(유효기간 포함)
+                                                            2. 보유및 이용기간: 전자상거래 상 소비자 보호에 관한 법률에 따라<br> 5년간 보관
+                                                            <br><br>
+                                                            ※ 위 개인정보 수집, 이용에 대한 동의를 거부할 수 있으며, 거부할 경우 서비스 이용이 제한됩니다.
+                                                        </p>
+                                                    </div>
+                                                    <button class="btn-close">닫기버튼</button>
+                                                </div>
+                                            </div>
+                                            <!-- //약관 팝업 -->
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="check_3" class="normal">
+                                            <label for="check_3">광고성 정보 수신 동의
+                                                <span>(선택)</span>
+                                            </label>
+                                            <button class="btn-more">보기</button>
+
+                                            <!-- 약관 팝업 -->
+                                            <div class="agree-view">
+                                                <div class="view-box">
+                                                    <h3>광고성 정보 수신 동의(선택)</h3>
+                                                    <div class="text">
+                                                        <p class="info">수신 동의한 이메일, SMS로 할인정보, 이벤트 등의 특별한 혜택 및 상품 정보를 받아
+                                                            보실 수 있습니다.
+                                                            수신 거부 시 사용 가능한 쿠폰 및 예약 알림 등이 발송되지 않습니다.</p>
+                                                    </div>
+                                                    <table class="table-agree">
+                                                        <caption>개인정보 수집 및 이용 관련 표</caption>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th style="width:25%">개인정보 수집 및 이용 항목</th>
+                                                                <th style="width:50%">개인정보 수집 및 이용 목적</th>
+                                                                <th style="width:25%">보유/이용기간</th>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>이메일, SMS</td>
+                                                                <td>새로운 서비스 및 할인정보, 이벤트, 할프로모션 등의 안내</td>
+                                                                <td>별도 동의 철회 시까지</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="table-agree">
+                                                        <caption>개인정보 수집 및 이용 관련 표</caption>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th style="width:25%">전송자</th>
+                                                                <td style="text-align: left; padding-left:15px;">고코투어 또는
+                                                                    오션투유</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th style="width:25%">전송자 연락처</th>
+                                                                <td style="text-align: left; padding-left:15px;">
+                                                                    help@go.co.kr</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th style="width:25%">파기절차 및 방법</th>
+                                                                <td style="text-align: left; padding-left:15px;">
+                                                                    · 파기절차: 회사는 파기 사유가 발생한 개인정보를 선정하고 개인 정보
+                                                                    보호책임자
+                                                                    승인 후
+                                                                    개인정보를 파기함.<br>
+                                                                    · 파기방법 : 회사는 전자적 파일 형태로 처리된 정보는 기록을 재생 할 수
+                                                                    없도록 파기하며,
+                                                                    종이 문서에 의하여 처리된 개인정보는 분쇄기로 분쇄하거나 소각하여 파기함.
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <button class="btn-close">닫기버튼</button>
+                                                </div>
+                                            </div>
+                                            <!-- //약관 팝업 -->
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="check_4" class="normal">
+                                            <label for="check_4">개인정보 제3자 제공 동의
+                                                <span>(필수)</span>
+                                            </label>
+                                            <button class="btn-more">보기</button>
+
+                                            <!-- 약관 팝업 -->
+                                            <div class="agree-view">
+                                                <div class="view-box">
+                                                    <h3>개인정보 제 3자 제공 동의(필수)</h3>
+
+                                                    <table class="table-agree">
+                                                        <caption>개인정보 수집 및 이용 관련 표</caption>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th style="width:13%">제공받는 자</th>
+                                                                <th style="width:37%">정보 제공 항목</th>
+                                                                <th style="width:37%">제공 목적</th>
+                                                                <th style="width:13%">보유 및<br> 이용기간</th>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <th style="width:10%">예약숙소</th>
+                                                                <td style="text-align: left; padding:10px;">예약자명,
+                                                                    이메일, 휴대폰번호,
+                                                                    예약번호, 예약객실명, 결제정보
+                                                                    (결제금액, 신용카드번호, 유효기간)</td>
+                                                                <td style="text-align: left; padding:10px;">숙박 예약 서비스의
+                                                                    이용 계약이행
+                                                                    (서비스 제공, 예약 확인, 이용자 정보 확인)
+                                                                </td>
+                                                                <td>5년</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th style="width:10%">결제대행업체</th>
+                                                                <td style="text-align: left; padding:10px;">신용카드, 휴대폰,
+                                                                    네이버페이,
+                                                                    가상계좌 등을 통한 결제사항</td>
+                                                                <td style="text-align: left; padding:10px;">상품 구매에 필요한
+                                                                    신용카드,
+                                                                    현금결제를 포함한 전자지급수단,
+                                                                    그밖에 전자적 방법에 따른 지급수단
+                                                                    전자금융거래수단 등의 결제정보 전송,
+                                                                    휴대폰 및 티머니 소액 결제, 채권추심</td>
+                                                                <td>5년</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="text">
+                                                        <p class="info">
+                                                            ※ 예약은 오션투유 리조트의 공식온라인 총판인 고코투어를 통해서 진행됩니다.
+                                                            위 개인정보 제3자 제공 동의를 거부할 수 있으며, 거부할 경우 서비스 이용이 제한됩니다.
+                                                        </p>
+                                                    </div>
+                                                    <button class="btn-close">닫기버튼</button>
+                                                </div>
+                                            </div>
+                                            <!-- //약관 팝업 -->
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="check_5" class="normal">
+                                            <label for="check_5">만 14세 이상 확인
+                                                <span>(필수)</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <script>
+                                    $(function () {
+                                        // 체크박스 전체 선택
+                                        $(".check-list").on("click", "#check_all", function () {
+                                            var checked = $(this).is(":checked");
+
+                                            if (checked) {
+                                                $(this).parents(".check-list").find('input').prop("checked", true);
+                                            } else {
+                                                $(this).parents(".check-list").find('input').prop("checked", false);
+                                            }
+                                        });
+                                        // 체크박스 개별 선택
+                                        $(".check-list").on("click", ".normal", function () {
+                                            var is_checked = true;
+
+                                            $(".check-list .normal").each(function () {
+                                                is_checked = is_checked && $(this).is(":checked");
+                                            });
+
+                                            $("#check_all").prop("checked", is_checked);
+                                        });
+
+                                        //약관동의 보기 팝업
+                                        var chkList = $('.check-list > li');
+
+                                        $('.btn-more').click(function (e) {
+                                            e.preventDefault();
+                                            $(this).siblings('.agree-view').show();
+                                        });
+
+                                        $('.btn-close').click(function (e) {
+                                            e.preventDefault();
+                                            $('.agree-view').hide();
+                                        });
+
+                                    });
+
+                                    function agree_chk() {
+                                        var is_checked = true;
+
+                                        $(".check-list .normal").each(function (e) {
+                                            if (e != 2) is_checked = is_checked && $(this).is(":checked");
+                                        });
+
+                                        if (is_checked) {
+                                            pay.payment_submit('web', 'all', 'R')
+                                        } else {
+                                            alert("필수 약관에 동의해주세요.");
+                                        }
+                                    };
+                                </script>
+                                <!-- //2021.06.30 약관동의 추가 -->
+                                <!-- //객실가격 -->
+                            </div>
+                            <!-- </div> -->
+                            <!-- 아이디 reserLeft태그 삭제 -->
+                            <!-- //결제창 정보 -->
+                            <!-- 예약정보입력 -->
+                            <!-- reser_enter의 style 삭제 -->
+                            <div id="reser_enter">
+                                <img src="http://img.ocean2you.co.kr/go/step_01.jpg" alt="예약정보입력" />
+                                <div class="input" style="margin-top:10px;padding-bottom:20px">
+                                    <table class="input_t">
+                                        <colgroup>
+                                            <col width="125">
+                                            <col width="510">
+                                        </colgroup>
+                                        <tr>
+                                            <th height="35" style="padding-left:15px">투숙자명</th>
+                                            <td style="padding-left:10px" align="left">
+                                                <input name="stayname" id="stayname" type="text" maxlength="40"
+                                                    required>
+                                                <input type="hidden" name="reserve_name" id="reserve_name" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th height="35" style="padding-left:15px">연락처</th>
+                                            <td style="padding-left:10px" align="left">
+                                                <select name="tel1" title="휴대전화-국번선택" id="tel1" style="width:87px"
+                                                    required>
+                                                    <option selected="selected" value="010">010</option>
+                                                    <option value="010" selected="selected">010</option>
+                                                    <option value="011">011</option>
+                                                    <option value="016">016</option>
+                                                    <option value="017">017</option>
+                                                    <option value="018">018</option>
+                                                    <option value="019">019</option>
+                                                </select>&nbsp;-
+                                                <input name="tel2" title="휴대전화두번째자리" id="tel2"
+                                                    onkeyup="util.checknum('tel2', 'tel3', '3');util.checktype('number', 'tel2')"
+                                                    type="text" maxlength="4" style="width:80px" required>&nbsp;-
+                                                <input name="tel3" title="휴대전화세번째자리" id="tel3"
+                                                    onkeyup="util.checknum('tel3', 'email1', '3');util.checktype('number', 'tel3')"
+                                                    type="text" maxlength="4" style="width:80px" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th height="35" style="padding-left:15px">이메일</th>
+                                            <td style="padding-left:10px" align="left">
+                                                <input name="email1" tabindex="5" id="email1"
+                                                    onkeyup="util.checktype('email1', 'email1')" type="text"
+                                                    style="width:80px">
+                                                <em class="bgJoin icoEmail fl"> @</em>
+                                                <input name="email2" title="이메일 도메인명" id="email2"
+                                                    onkeyup="util.checktype('email2', 'email2')" type="text" size="15">
+                                                <select name="email_sel" tabindex="6" title="이메일 주소선택" class="sel1"
+                                                    id="email_sel" onchange="util.emailsel(this.value);">
+                                                    <option value="" selected="selected">이메일선택</option>
+                                                    <option value="naver.com">naver.com</option>
+                                                    <option value="hanmail.net">hanmail.net</option>
+                                                    <option value="nate.com">nate.com</option>
+                                                    <option value="gmail.com">gmail.com</option>
+                                                    <option value="hotmail.com">hotmail.com</option>
+                                                    <option value="lycos.co.kr">lycos.co.kr</option>
+                                                    <option value="empal.com">empal.com</option>
+                                                    <option value="dreamwiz.com">dreamwiz.com</option>
+                                                    <option value="korea.com">korea.com</option>
+                                                    <option value="dr" selected="selected">직접입력</option>
+                                                </select>
+                                                <div class="red">* 예약 후 객실 및 예약안내는 예약하시는 분의 휴대폰과 이메일로 보내드리오니<br /> 정확하게
+                                                    입력해주세요.</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th height="75" style="padding-left:15px">기타요청사항</th>
+                                            <td style="padding-left:10px" align="left">
+                                                <textarea name="memo" tabindex="7" id="memo"
+                                                    onclick="util.textchk(this.value)"
+                                                    onfocus="util.textchk(this.value)" rows="4" cols="75"></textarea>
+                                                <div class="red">* 요청사항은 투숙일 당일 현지 사정에 따라 가능여부가 확인되며, 가능하지 않을 수 있는 점 참고
+                                                    <br />&nbsp; 바랍니다.
+                                                </div>
+                                            </td>
+                                        <tr>
+                                            <th style="padding-left:15px">결제방법</th>
+                                            <td align="left" class="p_10" style="padding-left:10px;font-size:14px">
+                                                <ul>
+                                                    <li>
+                                                        <input name="pay_type" id="pay_cardform" type="radio"
+                                                            value="cardform" checked>
+                                                        <label for="pay_cardform" style="cursor:pointer">신용카드 간편결제(법인 및
+                                                            해외카드도 결제가능)</label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="pay_type" id="pay_card" type="radio" value="card">
+                                                        <label for="pay_card" style="cursor:pointer">신용카드 ISP결제(인증서
+                                                            제출방식, 앱카드)</label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="pay_type" id="pay_phone" type="radio" value="hp">
+                                                        <label for="pay_phone" style="cursor:pointer">휴대폰</label>
+                                                    </li>
+                                                </ul>
+
+                                                <!---결제수단별 공지사항,라디오버튼 선택 시 노출--->
+                                                <div class="comment comt" style="display:none" summary="무통장입금(가상계좌)"
+                                                    id="desc_va">
+                                                    <p style="margin-bottom:5px"><img src="//img.go.co.kr/btndot.png"
+                                                            width="5" height="5"> 무통장입금(가상계좌)시 예약자와 입금자 성함이 동일하여야 하며, 다른
+                                                        경우에는 별도 연락을 주셔야만 확인이 가능하오니 필히 참조 바랍니다.</p>
+                                                    <p style="margin-bottom:5px"><img src="//img.go.co.kr/btndot.png"
+                                                            width="5" height="5"> 무통장입금(가상계좌)은 입금이 완료될때까지는 예약진행이 되지
+                                                        않습니다.</p>
+                                                    <p style="color:#d31200; font-weight:bold">[필수] 취소 시 환불받을 계좌를
+                                                        입력해주세요.</p>
+                                                    <p style="margin-bottom:5px">
+                                                        은행 <input name="refund_bank" id="refund_bank" type="text"
+                                                            maxlength="40" value="" style="width:105px">
+                                                        &nbsp;&nbsp;예금주명 <input name="refund_name" id="refund_name"
+                                                            type="text" maxlength="40" value="양선희" style="width:105px">
+                                                    </p>
+                                                    <p style="margin-bottom:5px">계좌번호 <input name="refund_number"
+                                                            id="refund_number" type="text" maxlength="40" value=""
+                                                            style="width:264px"
+                                                            onkeyup="util.checktype('number', 'refund_number')"></p>
+                                                </div>
+
+                                                <div summary="신용카드" style="display:none" id="desc_card" class="comt">
+                                                    <div class="comment">
+                                                        <p><img src="//img.go.co.kr/btndot.png" width="5" height="5">
+                                                            은행계 카드사인 BC, KB, 외환, 신한카드의 무이자 할부 행사 진행 시, 해당 은행의 계열 은행 발급
+                                                            카드는 제외됩니다. <br />(예. KB카드 무이자 할부 행사 시, KB BC카드 제외, 신한카드 무이자
+                                                            할부 행사 시, 신한BC카드, 전북은행, 제주 은행카드는 제외)</p>
+                                                        <p><img src="//img.go.co.kr/btndot.png" width="5" height="5">
+                                                            BC카드에서 매입하는 모든 저축은행카드의 경우, 일반 BC카드 결제와 동일하게 진행하시면 됩니다. </p>
+                                                    </div>
+                                                    <img src="//img.go.co.kr/btn_card2.jpg" alt="무이자할부안내"
+                                                        style="margin-top:5px;cursor:pointer"
+                                                        onclick="javascript:util.on('#loadcard')" />
+                                                </div>
+
+                                                <div class="comment comt" style="display:none" summary="휴대폰"
+                                                    id="desc_hp">
+                                                    <p><img src="//img.go.co.kr/btndot.png" width="5" height="5"> 통신3사
+                                                        휴대폰 결제 한도금액이 월 30만원에서 50만원으로 상향조정 되었습니다. 단, 고객님이 통신사에 동의하신 경우에
+                                                        한도가 조정되니, 이용중인 통신사에 문의해주시기 바랍니다. (휴대폰에서 114) </p>
+                                                    <p><img src="//img.go.co.kr/btndot.png" width="5" height="5"> 개인에 따라
+                                                        실제 한도 금액은 차이가 있을 수 있습니다.</p>
+                                                </div>
+
+                                                <div summary="신용카드 간편결제" id="desc_cardform" class="comt">
+                                                    <div class="comment">
+                                                        <p style="letter-spacing:-0.3px;margin-bottom:5px"><img
+                                                                src="//img.go.co.kr/btndot.png" width="5" height="5">
+                                                            신용카드 간편결제는 <span style="text-decoration:underline">별도의 설치없이
+                                                                카드정보 입력</span>만으로 결제가 가능합니다.</p>
+                                                        <p style="letter-spacing:-0.3px;margin-bottom:5px"><img
+                                                                src="//img.go.co.kr/btndot.png" width="5" height="5">
+                                                            신용카드, 체크카드, 법인카드로 결제가 가능합니다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- 2021.06.30 고코투어 삭제 -->
+                                    <!-- <div class="btn" style="margin-bottom:30px">
+                                        <div class="official_logo" style="height:62px">
+                                            <span>인투라온호텔</span> 온라인<br />
+                                            공식 대행여행사 <em>고코투어</em>
+                                        </div>
+                                    </div> -->
+                                    <!-- //2021.06.30 고코투어 삭제 -->
+                                </div>
+                            </div>
+                            <!-- //예약정보입력 -->
+                            <!-- //2021.06.30 -->
+                        </form>
+                        <div id="script_div"></div>
+                        <script type="text/javascript">
+                            $.cookie("rsv_string", null, { path: '/', domain: 'intoraon.co.kr', expires: -1 });
+                            $.cookie("rsv_login", null, { path: '/', domain: 'intoraon.co.kr', expires: -1 });
+
+                            $("input[name='pay_type']").click(function () {
+                                if (this.value == 'bank') {
+                                    $("#cash_receipt").show();
+                                } else {
+                                    $("#cash_receipt").hide();
+                                }
+
+                                $(".comt").hide();
+                                $("#desc_" + this.value).show();
+                            });
+
+                            $("#cr").click(function () {
+                                if ($(this).is(":checked") == true) {
+                                    $("#cr_gubun").show();
+                                } else {
+                                    $("#cr_gubun").hide();
+                                }
+                            });
+
+                            $("input[name='same_chk']").click(function () {
+                                if ($(this).is(":checked") == true) {
+                                    $("input[name='stayname']").val($("#reserve_name").val());
+                                } else {
+                                    $("input[name='stayname']").val("양선희");
+                                }
+                            });
+
+                            $("input[name='allchk']").click(function () {
+                                if ($(this).is(":checked") == true) {
+                                    $(".chks").prop("checked", true);
+                                } else {
+                                    $(".chks").prop("checked", false);
+                                }
+                            });
+                            util.emailsel('dr');
+                            $("#email2").val('naver.com');
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer">
+            <div class="group inner">
+                <address>
+                    인투라온호텔<span class="space"></span> 강원도 정선군 사북읍 지장천로 583 <span class="space"></span> 대표전화 1644-1243
+                </address>
+                <p class="copyr">Copyright &#9400;INTORAON . ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+        <!-- /.footer -->
+    </div>
+
+</body>
+
+</html>

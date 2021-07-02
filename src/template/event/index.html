@@ -1,0 +1,98 @@
+@@include('src/template/include/_head.html')
+
+<link rel="stylesheet" type="text/css" href="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/static/css/event/init.css">
+<!-- <link rel="stylesheet" type="text/css" href="/static/css/event/init.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+
+<link href="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/static/css/jquery.bxslider.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    @@include('src/template/include/_header.html')
+
+    <div class="contents event-contents">
+        <div class="sub">
+            <div class="sub_top_menu">
+                <h4 class="page_title">이벤트/축제</h4>
+                <h6 class="page_sub_title">환타스틱 인천의 다양한 축제정보를 통해 행복한 시간을 함께하세요.</h6>
+            </div>
+        </div>
+
+        <div class="sub evt_box container">
+            <div class="sub_item_box">
+                <div class="sub_item_wrap">
+                    <div class="sub_item">
+                        @@loop('src/template/event/_event_list_temp.html','/event/_event_list.json')
+                        <!-- <div class="evt-item">
+                            <div class="bxBox">
+                                <ul class="bxS fnBxSlider">
+                                    <li class="li-1"><img src="http://img.hotelairsky.co.kr/svc/img/event/walkingfest.jpg" alt="이벤트"></li>
+                                    <li class="li-2">
+                                        <img src="http://img.hotelairsky.co.kr/svc/img/event/walkingfest.jpg" alt="이벤트">
+                                        <div class="evt-bx-box">
+                                            <div class="evt-txt-box">
+                                                <div class="evt-txt-container">
+                                                    <p class="evt-bx-tit">함께 걷자 인천 페스타</p>
+                                                    <p class="evt-bx-txt">
+                                                        걷고, 나누고, 즐기고, 행복한 경험 모두 한번에!함께 걷자! 인천 페스타는 가정형편이 어려워 굶거나 아픈 어린이 등<br class="hidden-smxs">
+                                                        위기가정과 인도적 차원에서 지원이 시급한 범죄피해자 긴급지원을 위한<br class="hidden-smxs">
+                                                        기금마련 행사입니다.대한적십자사 인천지사와 경기일보가 주관하며, 인천광역시와<br class="hidden-smxs">
+                                                        인천지방경찰청 범죄피해자 보호협의회의 후원으로 개최됩니다.<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="evt-tb-box">
+                                <ul class="evt-tb cf">
+                                    <li class="nth-1 t-full">
+                                        <p class="p-lbl">행사명</p>
+                                        <p class="p-txt">함께 걷자 인천 페스타</p>
+                                    </li>
+                                    <li class="nth-2 t-half">
+                                        <p class="p-lbl">일정</p>
+                                        <p class="p-txt">2019년 04월 20일</p>
+                                    </li>
+                                    <li class="nth-3 t-half">
+                                        <p class="p-lbl">주최</p>
+                                        <p class="p-txt">대한적십자사 인천광역시지사, 경기일보</p>
+                                    </li>
+                                    <li class="nth-4 t-half">
+                                        <p class="p-lbl">장소</p>
+                                        <p class="p-txt">어울큰마당(구, 야외 음악당)</p>
+                                    </li>
+                                    <li class="nth-5 t-half">
+                                        <p class="p-lbl">추가정보</p>
+                                        <p class="p-txt"><a href="http://redcross.or.kr/festival" target="_blank" title="새창 열림" rel="noopener noreferrer">▷자세히보기</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @@include('src/template/include/_footer.html')
+    
+    <script src="/static/js/jquery.bxslider.min.js"></script>
+    <script>
+        //박스슬라이더
+        $(function () {
+            $(".fnBxSlider").bxSlider({
+                mode: 'fade',
+                auto: true,
+                autoControls: false,
+                speed: 500,
+                duration: 6000
+            });
+        });
+    </script>
+</body>
+
+</html>

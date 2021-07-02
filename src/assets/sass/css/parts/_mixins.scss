@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+// 전달인자 설징이 없는 믹스인
+@mixin reset-box-model {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+@mixin reset-table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+// 전달인자가 설정된 믹스인
+@mixin position($type:relative, $top:null, $left:null, $bottom:null, $right:null) {
+	position: $type;
+	top: $top;
+	left: $left;
+	bottom: $bottom;
+	right: $right;
+}
+@mixin pos($type:relative, $top:null, $left:null, $bottom:null, $right:null) {
+	position: $type;
+	top: $top;
+	left: $left;
+	bottom: $bottom;
+	right: $right;
+}
+@mixin size($w:null, $h:null) {
+	width: $w;
+	height: $h;
+}
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	transition: $args;
+}
+@mixin margin($t:null, $l:null) {
+	margin-top: $t;
+	margin-left: $l;
+}
+// 마이크로 클리어픽스(Micro Clearfix)
+@mixin clearfix {
+	&::before, &::after {
+		content: '';
+		display: table;
+	}
+	&::after {
+		clear: both;
+	}
+	.lt-ie8 & {
+		zoom: 1;          
+	}
+}
+
+// 커스텀 믹스인
+@mixin center($w: 1200px) {
+	width: $w;
+	margin-left: auto;
+	margin-right: auto;
+}
+@mixin sizes($w: null) {
+	width: $w;
+	height: $w;
+}
+@mixin dp($type: inline-block) {
+	position: relative;
+	display: inline-block;
+}
+@mixin va($type: middle) {
+	position: relative;
+	display: inline-block;
+	vertical-align: $type;
+}
+@mixin float($type: left) {
+	position: relative;
+	float: $type;
+}
+@mixin ht($h: null, $lh: null) {
+	height: $h;
+	line-height: $lh;
+}
+
+@mixin ap-no {
+	appearance: none;
+	padding: 0;
+	margin: 0;
+	background: none;
+	border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+}
+@mixin fst-pt0 {
+	&:first-child {
+		padding-top: 0;
+	}
+}
+@mixin fst-pl0 {
+	&:first-child {
+		padding-left: 0;
+	}
+}
+@mixin fst-mt0 {
+	&:first-child {
+		margin-top: 0;
+	}
+}
+@mixin fst-ml0 {
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+// max-width
+@mixin screen-max($w: null) {
+    @media (max-width: #{$w}) {
+        @content;
+    }
+}
+// min-width
+@mixin screen-min($w: null) {
+    @media (min-width: #{$w}) {
+        @content;
+    }
+}
+// min-max
+@mixin screen-min-max($w: null, $w2: null) {
+    @media (min-width: #{$w}) and (max-width: #{$w2}) {
+        @content;
+    }
+}
+
+// 버튼
+@mixin btn-base($h: 60px, $lh: 60px, $p: 0 35px, $fz: 24px) {
+	display: inline-block;
+	height: $h;
+	padding: $p;
+	background: #000;
+	line-height: $lh;
+	font-size: $fz;
+	color: #fff;
+}

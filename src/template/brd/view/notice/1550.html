@@ -1,0 +1,48 @@
+@@include('src/template/include/_head.html')
+</head>
+
+<body>
+
+    @@include('src/template/include/_header.html')
+
+    <div class="sub board_view">
+        @@include('src/template/include/about/_sub_top.html', {
+            "title": "공지사항",
+            "sub_title": "인투라온에서 고객님께 알려드리는 안내사항입니다."
+            })
+        <div class="container box">
+            <h3>
+                <i class="icon-37"></i> [알림] 객실정비 품질 향상 및 개선 안내 </h3>
+            <div class="brd_info">
+                <span>관리자</span>/
+                <span><i class="icon-36"></i>2019-06-28</span>/
+                <span><i class="icon-35"></i>85</span>
+            </div>
+
+
+            <div class="brd_cont">
+                <div style="color: rgb(0, 0, 0); font-family: ">
+                    <div style="color: rgb(0, 0, 0); font-family: &quot;Malgun Gothic&quot;, dotum, verdana, helvetica, arial, sans-serif; font-size: 14px;">
+                        안녕하세요.<br />
+                        씨베이호텔입니다.<br />
+                        &nbsp;<br />
+                        먼저 고객님의 호텔 이용에 불편을 드려 고개숙여 사과드립니다.<br /><br />
+                        기존 거래하던 객실청소 업체가 정비 불량이 많아 지난주 토요일(6/22) 새로운 업체로 변경하여 객실정비를 진행하였으나, 목표했던 전객실(340객실) 중 일부를 체크인 시점까지 정비하지 못하여 고객님께 불편을 드렸습니다.<br /><br />
+                        본 문제로 씨베이호텔은 객실 정비 직원을 직접 채용하여 객실정비를 진행하고 있으며,<br />이로인해 더 품질 높은 객실 정비가 이뤄지고 있습니다.<br /><br />
+                        현재 주중 250객실의 투숙 중에도 문제없이 정비가 이뤄지고 있으며,<br />전객실 만실일 경우에도 전혀 문제없이 고객님을 모실 준비가 되어 있습니다.<br /><br />
+                        앞으로 이러한 문제가 재발하지 않도록 서비스품질 향상에 최선을 다하겠습니다. <br /><br />
+                    </div>
+                    &nbsp;<br />
+                    <div style="color: rgb(0, 0, 0); font-family: &quot;Malgun Gothic&quot;, dotum, verdana, helvetica, arial, sans-serif; font-size: 14px;">
+                        감사합니다.<br />&nbsp;<br /></div>
+                </div>
+            </div>
+
+            <button type="button" class="brd_btn" onclick="history.back()">뒤로가기</button>
+        </div>
+    </div>
+
+    @@include('src/template/include/_footer.html')
+</body>
+
+</html>

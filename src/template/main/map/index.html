@@ -1,0 +1,167 @@
+@@include('src/template/include/_head.html')
+</head>
+
+<body>
+
+    @@include('src/template/include/_header.html')
+
+    <div class="sub value_map">
+        @@include('src/template/include/about/_sub_top.html', {
+        "title": "오시는길",
+        "sub_title": "아름답고 푸른 바다가 호텔 바로 앞에 펼쳐져 있는 인투라온호텔로 초대합니다."
+        })
+
+        <div class="value_map_info container">
+            <div class="value_map_info_top">
+                <div class="value_map_info_item_wrap">
+                    <!-- <div class="map_address">
+                        <p><strong>주소</strong>강원도 강릉시 주문진읍 주문로 59</p>
+                        <p><strong>이메일</strong>valuehotelgangneung@ebiznetworks.co.kr</p>
+                        <p><strong>전화</strong>1666-1243</p>
+                    </div> -->
+                    <!-- <div id="map_box" class="map_box" style="position: relative; display: block;">
+                        
+                    </div> -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1598422686448" class="root_daum_roughmap root_daum_roughmap_landing kakao-map" style="width: 100%;"></div>
+                    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                    <!-- 실행 스크립트 -->
+                    <script charset="UTF-8">
+                        
+                        let mapWidth = $(".kakao-map").outerWidth();
+                        let currentHeight = (mapWidth*500) / 1090 + ((1090/mapWidth - 1) * 40);
+                        $(window).resize(function(){
+                            let mapWidth = $(".kakao-map").outerWidth();
+                            currentHeight = (mapWidth*500) / 1090 + ((1090/mapWidth - 1) * 40);
+                            console.log(currentHeight);
+                            $(".kakao-map .wrap_map").css("height", currentHeight);
+                            
+                        });
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1598422686448",
+                            "key" : "2zs75",
+                            "mapHeight" : currentHeight
+                        }).render();
+                    </script>
+                    <br>
+                    <table class="map-tbl">
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>도로명주소</th>
+                            <td>26152 강원도 정선군 사북읍 지장천로 583</td>
+                        </tr>
+                        <tr>
+                            <th>지번주소</th>
+                            <td>26152 강원도 정선군 사북읍 사북리 354-32</td>
+                        </tr>
+                        <tr>
+                            <th>대표번호</th>
+                            <td>033-590-4000(프론트), 1666-1243(예약실)</td>
+                        </tr>
+                        <tr>
+                            <th>주변버스 정류장</th>
+                            <td>
+                                사북버스 정류장 (호텔까지 200미터 거리 / 도보 4분)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>주변교통편</th>
+                            <td>
+                                [버스이용]<br>
+                                고한.사북공영버스터미널에서 사북9리, 연세병원 방면 버스승차(71, 81, 80-4, 84, 82-4, 70-1, 70-2, 70, 80-3, 50, 82, 80번 버스 등) → 사북버스 정류장 하차(6개 정류장 10분 소요) → 호텔까지 서쪽으로 200m 도보이동(4분 소요)
+                                <br><br>
+                                [기차이용]<br>
+                                서울 청량리역 승차(1일 6회 운행/무궁화호) → 사북역 하차 → 호텔까지 서쪽으로 600m 도보이동(7분 소요)
+                                <br>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="value_map_info_item">
+                <div class="value_map_info_item_wrap">
+                    <p><strong>자가용 이용 시</strong></p>
+                    <div class="sh_small_wrapper">
+                        <div class="sh_small c-black title">
+                            ▶서울
+                        </div>
+                        <div class="sh_small c-black">
+                            중부고속도로 → 광주원주고속도로 → 중앙고속도로(춘천,금호) → 제천TG → 59번 국도 (2시간 10분 소요)
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶대전
+                        </div>
+                        <div class="sh_small c-black">
+                            경부고속도로 → 중부고속도로 → 평택제천고속도로 → 중앙고속도로(춘천,금호) → 제천TG → 59번 국도 (2시간 20분 소요)
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶대구
+                        </div>
+                        <div class="sh_small c-black">
+                            경부고속도로 → 중앙고속도로(춘천,금호) → 제천TG → 59번 국도 (2시간 30분 소요)
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶광주
+                        </div>
+                        <div class="sh_small c-black">
+                            고창담양고속도로 → 호남고속도로 → 경부고속도로 → 중부고속도로 → 평택제천고속도로 → 중앙고속도로(춘천,금호) → 제천TG → 59번 국도 (4시간 소요)
+
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶부산
+                        </div>
+                        <div class="sh_small c-black">
+                            중앙고속도로 → 경부고속도로 → 중앙고속도로(춘천→금호) → 제천TG → 59번 국도 (4시간 소요)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="value_map_info_item margin-bottom-30">
+                <div class="value_map_info_item_wrap">
+                    <p><strong>버스이용 시</strong></p>
+                    <div class="sh_small_wrapper">
+                        <div class="sh_small c-black title">
+                            ▶서울
+                        </div>
+                        <div class="sh_small c-black">
+                            동서울터미널 → 고한.사북공영버스터미널(2시간 40분 소요)
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶대전
+                        </div>
+                        <div class="sh_small c-black">
+                            대전복합터미널 → 고한.사북공영버스터미널(4시간 소요)
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶대구
+                        </div>
+                        <div class="sh_small c-black">
+                            대구북부시외버스터미널 → 고한.사북공영버스터미널(3시간 30분 소요)
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶광주
+                        </div>
+                        <div class="sh_small c-black">
+                            유스퀘어광주종합버스터미널 → 고한.사북공영버스터미널(6시간 소요)
+                        </div>
+                        <div class="sh_small c-black title">
+                            ▶부산
+                        </div>
+                        <div class="sh_small c-black">
+                            부산종합버스터미널 → 고한.사북공영버스터미널(5시간 소요)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @@include('src/template/include/_footer.html')
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+@@include('src/template/include/_head.html')
+
+<link rel="stylesheet" type="text/css" href="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/static/css/tourist/init.css">
+<!-- <link rel="stylesheet" type="text/css" href="/static/css/tourist/init.css"> -->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+
+</head>
+
+<body class="">
+
+    @@include('src/template/include/_header.html')
+
+    <div class="contents group-contents">
+        <div class="sub">
+            <div class="sub_top_menu">
+                <h4 class="page_title">주변관광지 안내</h4>
+                <h6 class="page_sub_title">더욱 알찬 여행을 즐기는 방법! 추천 주변 관광지를 소개합니다.</h6>
+            </div>
+        </div>
+
+        <div class="sub group_box container">
+            <div class="sub_item_box">
+                <div class="sub_item_wrap">
+                    <div class="sub_item">
+                        <section class="tourist-sec program-sec">
+                            <h3 class="h3-1">자연관광지</h3>
+                            <ul class="ul-list ">
+
+                                @@loop('src/template/tourist/_tour_info/_tour_list_temp.html','tourist/_tour_info/_tour_list_nature.json')
+
+                            </ul>
+                            <h3 class="h3-2">액티비티 관광지</h3>
+                            <ul class="ul-list">
+                                @@loop('src/template/tourist/_tour_info/_tour_list_temp.html','tourist/_tour_info/_tour_list_activity.json')
+                            </ul>
+                            <h3 class="h3-2">시설 관광지</h3>
+                            <ul class="ul-list">
+                                @@loop('src/template/tourist/_tour_info/_tour_list_temp.html','tourist/_tour_info/_tour_list_facil.json')
+                            </ul>
+                            <h3 class="h3-2">기타 관광지</h3>
+                            <ul class="ul-list">
+                                @@loop('src/template/tourist/_tour_info/_tour_list_temp.html','tourist/_tour_info/_tour_list_etc.json')
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cf"></div>
+    </div>
+
+
+    @@include('src/template/include/_footer.html')
+</body>
+
+</html>

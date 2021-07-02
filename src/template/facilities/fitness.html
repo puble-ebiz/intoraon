@@ -1,0 +1,56 @@
+@@include('src/template/include/_head.html')
+</head>
+
+<body>
+
+    @@include('src/template/include/_header.html')
+
+    <div class="restbar">
+        @@include('src/template/include/facilities/_sub_top.html', {
+        "title": "휘트니스센터",
+        "sub_title": "휴식과 건강을 위한 소규모 헬스공간을 고객님께 무료로 제공합니다."
+        })
+
+        <div class="sub container">
+            <div class="sub_item_box">
+                <div class="sub_item_wrap">
+                    <div class="sub_item">
+                        <div class="slick_slider">
+                            <div class="icon-prev"><i class="icon-33"></i></div>
+                            <div class="icon-next"><i class="icon-32"></i></div>
+                            <div class="slick_basic">
+                                <div><img src="http://img.intoraon.co.kr/facilities/fitness/001.jpg" alt="사진"></div>
+                            </div>
+                        </div>
+                        <div class="item_info">
+                            <div class="info_wrap">
+                                <h5 class="info_title">위치안내</h5>
+                                <div class="info_content">지하 2층</div>
+                            </div>
+                            <div class="info_wrap">
+                                <h5 class="info_title">운영안내</h5>
+                                <div class="info_content">
+                                    <span>운영시간 : 07시~22시</span><br>
+                                    <span>투숙객 무료이용</span><br>
+                                    <span>운동복 환복, 개인 수건 지참 후 이용가능</span><br>
+                                    <span>	샤워는 투숙하신 객실에서 이용해 주십시오.</span>
+                                </div>
+                            </div>
+                            <div class="info_wrap">
+                                <h5 class="info_title">이용문의</h5>
+                                <div class="info_content">
+                                    <span>프론트 전화 033-590-4002
+                                    </span><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @@include('src/template/include/_footer.html')
+</body>
+
+</html>

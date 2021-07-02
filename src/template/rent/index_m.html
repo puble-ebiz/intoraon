@@ -1,0 +1,333 @@
+@@include('src/template/include/_head.html')
+
+<link rel="stylesheet" href="http://static.go.co.kr/css/mobile_layout_goco.css" type="text/css">
+<link rel="stylesheet" href="http://static.hotelairsky.co.kr/svc/css/rent/init_m.css">
+<!-- <link rel="stylesheet" href="/static/svc/css/rent/init_m.css"> -->
+
+<link rel="stylesheet" href="http://static.go.co.kr/css/swiper.min.css" type="text/css">
+<script type="text/javascript" src="http://static.go.co.kr/js/swiper.min.js"></script>
+</head>
+
+<body class="page-rent">
+
+    @@include('src/template/include/_header.html')
+
+    <!-- 190109 .type-2 클래스 추가 -->
+    <table id="product_info" class="type-2">
+        <colgroup>
+            <col width="25%">
+            <col width="75%">
+        </colgroup>
+        <tbody>
+            <tr>
+                <!-- 스타일 수정 -->
+                <td colspan="2" height="35" class="product_info_title" style="padding:0; font-weight:bold; font-size:16px; text-align: center; color: #000; background: #fff">
+                    7일부터 6개월까지 이용가능!
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table class="roomINFO" width="100%">
+                        <colgroup>
+                            <col width="40%">
+                            <col width="30%">
+                            <col width="30%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td class="tit">상품정보</td>
+                                <td class="tit">숙박기간</td>
+                                <td class="tit">특혜</td>
+                            </tr>
+                            <tr class="bd-b0">
+                                <th rowspan="4">
+                                    <!-- 스탠다드룸<br> -->
+                                    스위트룸<br>
+                                    디럭스룸<br>
+                                    슈페리어룸
+                                </th>
+                                <th>14일</th>
+                                <td rowspan="4" style="font-weight:bold; letter-spacing: -1px; color:#ff0000;">
+                                    <span style="font-size:14px;">공과금 일체 포함</span>
+                                    <span style="display: block; font-size:10px;">(전기,수도,가스요금 등)</span>
+                                </td>
+                            </tr>
+                            <tr class="bd-b0">
+                                <th>1개월</th>
+                            </tr>
+                            <tr class="bd-b0">
+                                <th>6개월</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <script type="text/javascript">
+                $(function () {
+                    $("input[name='rent_checkin']").val($(".sdate").val());
+                    $("input[name='rent_checkout']").val($(".edate").val());
+                    $("input[name='rent_r_no']").val($(":input:radio[name=room_type]:checked").val());
+
+
+                    $(".sdate").datepicker({
+                        dateFormat: "yy-mm-dd",
+                        showAnim: "slideDown",
+                        dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+                        minDate: "2019-01-09",
+                        changeMonth: true,
+                        changeYear: true,
+
+                    });
+
+
+                    $('.sdate').datepicker("option", "onClose", function (selectedDate) {
+                        edate = ($(".sdate").val()).split("-");
+                        var dt = new Date(edate[1] + "/" + edate[2] + "/" + edate[0]);
+                        var day = dt.getDate();
+                        var month = (dt.getMonth()) + 1;
+                        var year = dt.getFullYear();
+
+                        dt.setDate(dt.getDate() + 1);
+                        day = dt.getDate();
+                        month = (dt.getMonth()) + 1;
+                        year = dt.getFullYear();
+
+                        edate_val = year + "-" + month + "-" + day;
+                        $(".edate").datepicker("option", "minDate", edate_val);
+                    });
+                    $('.edate').datepicker("option", "minDate", $(".sdate").val());
+                    $("#nseldate").datepicker({
+                        dateFormat: "yy-mm-dd",
+                        showAnim: "slideDown",
+                        dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+                        minDate: "2019-01-10",
+                        changeMonth: true,
+                        changeYear: true
+                    });
+                });
+
+                function rent_price() {
+                    $.ajax({
+                        type: "POST",
+                        url: "./state.php",
+                        data: $("form[name='rent_form']").serialize(),
+                        success: function (e) {
+                            var res = e.split("||");
+                            $("#room_price").html(res[0] + "원");
+                            $("#serve_price").html(res[1] + "원");
+                            $("#vat_price").html(res[2] + "원");
+                            $("#total_price").html(res[3] + "원");
+                            $("input[name='night']").val(res[4]);
+                        }
+                    });
+                }
+            </script>
+            <tr>
+                <!-- 스타일 수정 -->
+                <td colspan="2" height="35" class="product_info_title" style="padding:0; font-weight:bold; font-size:16px; text-align: center; color: #000; background: #fff">
+                    예상 요금
+                </td>
+            </tr>
+            <form name="rent_form"></form>
+            <input type="hidden" name="mode" value="rent_price_chk">
+            <input type="hidden" name="p_no" value="517">
+            <tr>
+                <td colspan="2">
+                    <table class="roomINFO" width="100%">
+                        <colgroup>
+                            <col width="100%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="tit" style="border-top:0;">예상 체류기간</th>
+                            </tr>
+                            <tr class="bd-b0">
+                                <td>
+                                    <div class="rsv-stay-area">
+                                        <div class="rsv-stay-box clr">
+                                            <p class="stay-chk">
+                                                <input type="radio" name="room_type" id="radio-1" checked><label for="radio-1"><span>스위트룸</span></label><br>
+                                                <input type="radio" name="room_type" id="radio-2"><label for="radio-2"><span>디럭스룸</span></label><br>
+                                                <input type="radio" name="room_type" id="radio-3"><label for="radio-3"><span>슈페리어룸</span></label><br>
+                                            </p>
+                                            <ul class="rsb-stay-list">
+                                                <li>
+                                                    <span class="lbl pl-15">체크인</span>
+                                                    <input name="hseldate" id="hseldate" class="type-1 sdate hasDatepicker" value="2019-01-09" readonly="" style="cursor:pointer">
+                                                </li>
+                                                <li>
+                                                    <span class="lbl pl-15">체크아웃</span>
+                                                    <input name="nseldate" id="nseldate" class="type-1 edate hasDatepicker" value="2019-01-10" readonly="" style="cursor:pointer">
+                                                </li>
+                                                <li>
+                                                    <span class="lbl pl-15">이용기간</span>
+                                                    <input type="text" name="night" class="type-1" readonly="">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="rsv-stay-box clr">
+                                            <div class="btn_search"><a href="javascript:rent_price();" title="전화걸기">예상요금</a></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="rsv-stay-area type-2 clr">
+                        <div class="stay-count-box">
+                            <div class="single-prc clr">
+                                <p class="p-row cf">
+                                    <span class="pull-left">객실요금</span><span class="pull-right c-red" id="room_price">0원</span>
+                                </p>
+                                <p class="p-row cf">
+                                    <span class="pull-left">봉사료</span><span class="pull-right c-red" id="serve_price">0원</span>
+                                </p>
+                                <p class="p-row cf">
+                                    <span class="pull-left">세금</span><span class="pull-right c-red" id="vat_price">0원</span>
+                                </p>
+                                <p class="mt-bar"></p>
+                                <p class="p-row cf">
+                                    <span class="pull-left">총 표준요금</span><span class="pull-right c-red" id="total_price">0원</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="bd-b0">
+                <td colspan="2">
+                    <!--<p style="padding-top: 12px; font-size:18px; text-align: center; font-weight:800; color:#ff0000; letter-spacing:-1px">비용이 부담되신다구요?</p>-->
+                    <!--<p style="padding:2px 0 3px; font-size:13px; text-align: center; color:#ff0000; letter-spacing:-1px">전화상담을 주시면<br>파격 할인된 요금을 별도로 안내해 드립니다.</p>-->
+                    <p style="padding:2px 0 3px; font-size:13px; text-align: center; color:#ff0000; letter-spacing:-1px">
+                        이용기간 일별 표준요금 기준이며,<br>
+                        장기이용은 전화상담시 이용일자에 따라<br>
+                        최대 40~50%의 할인요금을 안내해드립니다.
+                    </p>
+                    <div class="btn_search"><a href="tel:01088171634" title="전화걸기">전화문의 010-8817-1634 </a></div>
+                </td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center" class="info_title">소개</td>
+            </tr>
+            <tr>
+                <th height="37">주소</th>
+                <td>강원도 정선군 사북읍 지장천로 583</td>
+            </tr>
+            <tr>
+                <th height="37">홈페이지</th>
+                <td class="link">
+                    <a href="http://www.intoraon.co.kr" title="오션투유 홈페이지" target="_blank">http://www.intoraon.co.kr</a>
+                </td>
+            </tr>
+            <tr>
+                <th height="37">건축규모</th>
+                <td>로얄 스위트(30평형), 이그제큐티브 스위트(24.8평형), 주니어 스위트(14.5평형), 디럭스(8.1평형), 슈페리어룸(7.3평)</td>
+            </tr>
+            <tr>
+                <th height="37">총 객실수</th>
+                <td>467개 객실</td>
+            </tr>
+            <tr>
+                <th height="57">기본시설</th>
+                <td>어메니티 / LED TV / 에어콘 / 전기포트 / 냉장고 / 커피포트 / Wi-Fi / 생수제공 / 헤어드라이기 등</td>
+            </tr>
+            <tr>
+                <th height="57">부대시설</th>
+                <td>비바체 레스토랑 / 아이리스홀 / 제이드홀 / 오키드품 / 아테네가든 / 편의점</td>
+            </tr>
+            <tr>
+                <th height="57">주변안내</th>
+                <td>함백산 / 화암동굴 / 하이원 스키장 / 하이원 워터월드 / 강원랜드 카지노 / 화암카트장 / 병방치 스카이워크 / 정선 5일장 등</td>
+            </tr>
+
+            <tr>
+                <td height="40" colspan="2" align="center" class="info_title info_detail">상세정보 <img src="http://img.go.co.kr/mobile/icon_arrow_open.jpg" width="10"></td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- 호텔 상세이미지 -->
+                    <img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/rent/detail/01.jpg" alt="에어스카이 호텔 소개이미지" style="width:400%">
+                    <img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/rent/detail/02_1.jpg" alt="에어스카이 호텔 소개이미지" style="width:400%">
+                    <img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/rent/detail/02_2.jpg" alt="에어스카이 호텔 소개이미지" style="width:400%">
+                    <img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/rent/detail/03.jpg" alt="에어스카이 호텔 소개이미지" style="width:400%">
+                    <img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/rent/detail/04.jpg" alt="에어스카이 호텔 소개이미지" style="width:400%">
+                    <img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/rent/detail/05.jpg" alt="에어스카이 호텔 소개이미지" style="width:400%">
+                </td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center" class="info_title">인사말 <img src="http://img.go.co.kr/mobile/icon_arrow_open.jpg" width="10"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="info_text">
+                    <div id="" class="text">
+                        강원에서 만나는 최고의 자연, 정선 인투라온호텔<br><br>
+
+                        정선 인투라온은 467개의 객실과 연회장, 컨벤션센터, 세미나룸, 이벤트홀을 갖춘 휴식공간으로 수려한 자연 경관, 연간 1천만여 명의 관광객이 찾는 레저 1번지 정선의 중심에 있습니다.<br><br>
+
+                        현대적 감각의 객실과 다양한 비즈니스 업무를 위한 시설은 물론 내 집처럼 편안함을 드리고 있으며, 고객님의 편의에 맞춘 최상의 컨디션을 갖춘 최신 부대시설을 운영하고 있습니다.<br><br>
+
+                        고객님께 삶의 여유와 활력을 더하는 공간이 될 수 있도록 노력하고 있습니다. 아름다운 자연 속에서 최고의 하루를 선사할 수 있는 휴식처이자, 오랜 기억 속에 남을 수 있는 공간이 되어 드리겠습니다. 전 임직원은 최상의 호텔 서비스에 최선을 다할 것을 약속 드립니다.<br><br>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="btn_search"><a href="tel:01088171634" title="전화걸기">전화문의 010-8817-1634 </a></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 상단 슬라이드 -->
+    <script text="text/javascript">
+        $(function () {
+
+            var swiper = new Swiper('.swiper-container', {
+                scrollbar: '.swiper-scrollbar', // 스크롤
+                scrollbarHide: false, // 스크롤 안할때도 스크롤바 숨기지 않음
+                uniqueNavElements: true,
+                loop: true,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+
+                autoplayDisableOnInteraction: false,
+                paginationBulletRender: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                }
+            });
+
+        });
+    </script>
+    <!--//190109 장단기숙박 -->
+
+
+    <div class="clr"></div>
+    <!--버튼_스크롤 탑으로-->
+    <div class="btn-scroll-move-box">
+        <a href="javascript:;" class="btn-move-top" role="button" onclick="$( 'html, body' ).animate( { scrollTop : 0 }, 400 )">
+            <img src="http://img.monopalace.com/landing/inquiry/go_top.png" alt="위로">
+        </a>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                let scroll_H = $(document).scrollTop();
+                if(scroll_H > 500){
+                    $(".btn-scroll-move-box").show();
+                }
+                else{
+                    $(".btn-scroll-move-box").hide();
+                }
+            });
+        })
+    </script>
+    <!--///버튼_스크롤 탑으로-->
+    @@include('src/template/include/_footer.html')
+</body>
+
+</html>

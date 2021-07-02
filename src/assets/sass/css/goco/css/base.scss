@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+@import "./parts/common";
+
+// @import url('http://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+// @import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+// @import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+// @import url('http://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css');
+// @import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+
+/* bxSlider 재정의 */
+.bx-wrapper,
+.bx-wrapper .bx-viewport {
+	position: relative !important;
+	margin: 0 auto !important;
+	border: none !important;
+	box-shadow: none !important;
+	background: none !important;
+}
+.bx-controls {
+	display: none !important;
+}
+/* 고코투어 예약페이지 재정의 */
+#contents {
+	margin-top: 0;
+	border-top: 3px solid #717171;
+	img,  input {
+		vertical-align: middle;
+	}
+	#main5 .goods_info .tit2,
+	#main5 .goods_info .contents,
+	#tour_taste th,
+	#tour_taste td {
+		vertical-align: middle;
+	}
+}
+/* 고코투어 예약확인페이지 재정의 */
+#wrapper {min-height: 600px;}
+#container {margin-top: 30px !important;}
+/* 로그인 재정의 */
+#customer {position: relative; margin: 150px auto; padding: 15px 25px 35px; width:740px; background:#fff; border:1px solid #dedede; letter-spacing:-0.1px; font-family: "Nanum Gothic", sans-serif;}
+#customer .Login {}
+#customer .Login .naverLogin h4 {font-size:18px; color:#5a2400; font-weight: 400; margin-bottom: 25px;}
+#customer .Login .naverLogin .snsLarge {margin:auto; width:268px}
+#customer .Login .naverLogin .snsLarge ul {margin:auto; width:268px}
+#customer .Login .naverLogin .snsLarge li {text-align:center; letter-spacing:-0.3px; font-weight:600; line-height:55px; font-size:15px; margin-bottom: 10px;}
+#customer .Login .naverLogin .snsLarge li a {position: relative; display:block; width:268px; height:55px; border-radius: 5px; box-sizing: border-box;}
+#customer .Login .naverLogin .snsLarge li a img {position: absolute; top: 19px; left: 19px;}
+#customer .Login .naverLogin .snsLarge li a span {position: relative; display: inline-block; width: 210px;
+	float:right; border-left: 1px solid; text-align: center; border-left: 1px solid rgba(0,0,0,.196);}
+#customer .Login .naverLogin .snsLarge li.daum a span {width: 207px;}
+#customer .Login .naverLogin .snsLarge .naver a {color:#fff; background:#1ec800;}
+#customer .Login .naverLogin .snsLarge .kakao a {color:#3b1e1e; background:#ffeb00;}
+#customer .Login .naverLogin .snsLarge .facebook a {color:#fff; background:#3b5998;}
+#customer .Login .naverLogin .snsLarge .daum a {color:#4681bd; border:3px solid #4681bd; line-height:50px;}
+#customer .Login .naverLogin .snsLarge .twitter a {color:#fff; background:#32ccfe;}
+#customer .Login .naverLogin .snsLarge .google a {color:#fff; background:#d34837;}
+#customer .Login .naverLogin .snsLarge .naver a img {width: 20px;}
+#customer .Login .naverLogin .snsLarge .daum a img {width: 25px; top: 12px; left: 15px;}
+#customer .Login .naverLogin .snsLarge .facebook a img {width: 25px; top: 13px; left: 16px;}
+#customer .Login .naverLogin .snsLarge .kakao a img {top: 17px; left: 17px;}
+
+#customer .Login .naverLogin .alert {margin-top: 30px; text-align: center;}
+#customer .Login .naverLogin .alert .img, #customer .Login .naverLogin .alert .text {display: inline-block; vertical-align: top;}
+#customer .Login .naverLogin .alert .img {width:42px}
+#customer .Login .naverLogin .alert .text {padding-left:10px;line-height:18px; font-size: 13px; text-align: left;}
+#customer .Login .naverLogin .alert .text span {color:#ff610a}	
+
+.group {
+	position: relative;
+	@include center;
+	@include clearfix;
+}
+.sec, .row {
+    position: relative;
+	display: block;
+	@include clearfix;
+}
+.inner, .area {
+    position: relative;
+}
+.cf {
+    @include clearfix;
+}
+hr.division {
+	border: 0;
+	border-top: 1px solid #c5c5c5;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.ta-left {
+    text-align: left;
+}
+.ta-center {
+    text-align: center;
+}
+.ta-right {
+    text-align: right;
+}
+.fw-b {
+	font-weight: 700 !important;
+}
+.fw-eb {
+	font-weight: 800 !important;
+}
+.fz-12 {
+	font-size: 12px !important;
+}
+.fz-13 {
+	font-size: 13px !important;
+}
+.fz-14 {
+	font-size: 14px !important;
+}
+.fz-15 {
+	font-size: 15px !important;
+}
+.fz-16 {
+	font-size: 16px !important;
+}
+.fz-18 {
+	font-size: 18px !important;
+}
+.fz-20 {
+	font-size: 20px !important;
+}
+.fz-26  {
+    font-size: 26px !important;
+}
+input[type=password] {
+	font-family: $font-nnGothic;
+	@include reset-box-model;
+}
+.c-blue {color: $fg-blue;}
+img {
+	max-width: 100%;
+}
+.btn-default {
+	@include btn-base;
+}

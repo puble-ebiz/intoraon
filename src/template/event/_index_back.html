@@ -1,0 +1,146 @@
+@@include('src/template/include/_head.html')
+
+<link rel="stylesheet" type="text/css" href="/static/css/event/init.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+<link href="/static/css/jquery.bxslider.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    @@include('src/template/include/_header.html')
+
+    <div class="contents event-contents">
+        <div class="sub">
+            <div class="sub_top_menu">
+                <h4 class="page_title">이벤트/축제</h4>
+                <h6 class="page_sub_title">환타스틱 인천의 다양한 축제정보를 통해 행복한 시간을 함께하세요.</h6>
+            </div>
+        </div>
+
+        <div class="sub evt_box container">
+            <div class="sub_item_box">
+                <div class="sub_item_wrap">
+                    <div class="sub_item">
+                        <div class="evt-item">
+                            <div class="bxBox">
+                                <ul class="bxS fnBxSlider">
+                                    <li class="li-1"><img src="http://img.hotelairsky.co.kr/svc/img/event/walkingfest.jpg" alt="이벤트"></li>
+                                    <li class="li-2">
+                                        <img src="http://img.hotelairsky.co.kr/svc/img/event/walkingfest.jpg" alt="이벤트">
+                                        <div class="evt-bx-box">
+                                            <div class="evt-txt-box">
+                                                <div class="evt-txt-container">
+                                                    <p class="evt-bx-tit">함께 걷자 인천 페스타</p>
+                                                    <p class="evt-bx-txt">
+                                                        걷고, 나누고, 즐기고, 행복한 경험 모두 한번에!함께 걷자! 인천 페스타는 가정형편이 어려워 굶거나 아픈 어린이 등<br class="hidden-smxs">
+                                                        위기가정과 인도적 차원에서 지원이 시급한 범죄피해자 긴급지원을 위한<br class="hidden-smxs">
+                                                        기금마련 행사입니다.대한적십자사 인천지사와 경기일보가 주관하며, 인천광역시와<br class="hidden-smxs">
+                                                        인천지방경찰청 범죄피해자 보호협의회의 후원으로 개최됩니다.<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="evt-tb-box">
+                                <ul class="evt-tb cf">
+                                    <li class="nth-1 t-full">
+                                        <p class="p-lbl">행사명</p>
+                                        <p class="p-txt">함께 걷자 인천 페스타</p>
+                                    </li>
+                                    <li class="nth-2 t-half">
+                                        <p class="p-lbl">일정</p>
+                                        <p class="p-txt">2019년 04월 20일</p>
+                                    </li>
+                                    <li class="nth-3 t-half">
+                                        <p class="p-lbl">주최</p>
+                                        <p class="p-txt">대한적십자사 인천광역시지사, 경기일보</p>
+                                    </li>
+                                    <li class="nth-4 t-half">
+                                        <p class="p-lbl">장소</p>
+                                        <p class="p-txt">어울큰마당(구, 야외 음악당)</p>
+                                    </li>
+                                    <li class="nth-5 t-half">
+                                        <p class="p-lbl">추가정보</p>
+                                        <p class="p-txt"><a href="http://redcross.or.kr/festival" target="_blank" title="새창 열림" rel="noopener noreferrer">▷자세히보기</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @@include('src/template/include/_footer.html')
+
+    
+    <script>
+        //이벤트 리스트 불러오기
+        let eventInfoList;
+        $.ajax({
+            url : "./event_list.html",
+            type : "get",
+            async: false,
+            dataType : "text",
+            success : function (data) {
+                // console.log(data)
+                eventInfoList = JSON.parse(data);
+            },
+            error : function (data) {
+                // alert(data);
+                console.log("불러오기 오류")
+            }
+        });
+
+        $(document).ready(function(){
+
+            let startTime = new Date().getTime();
+            //이벤트 견본 생성
+            let eventBox = $(".sub_item_wrap .sub_item");
+            eventListSample = eventBox.clone();
+            $(".sub_item_wrap .sub_item .evt-item").remove();
+
+            //이벤트 세팅
+            $.each(eventInfoList, function(index, data){
+                let lastSample = eventListSample.clone();
+
+                let baseImgPaht = "http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/event/";
+
+                lastSample.find('.li-1 img').attr('src',baseImgPaht + data.imgPath);
+                lastSample.find('.li-2 img').attr('src',baseImgPaht + data.imgPath);
+                lastSample.find('.evt-txt-container .evt-bx-tit').text(data.name);
+                lastSample.find('.evt-tb-box .nth-1 .p-txt').text(data.name);
+                lastSample.find('.evt-tb-box .nth-2 .p-txt').text(data.date);
+                lastSample.find('.evt-tb-box .nth-3 .p-txt').text(data.host);
+                lastSample.find('.evt-tb-box .nth-4 .p-txt').text(data.place);
+                lastSample.find('.evt-tb-box .nth-5 .p-txt a').text(data.remake);
+                lastSample.find('.evt-tb-box .nth-5 .p-txt a').attr("href",data.href);
+                lastSample.find('.evt-txt-container .evt-bx-txt').html(data.text);
+                eventBox.append(lastSample.html());
+            });
+            let endTime = new Date().getTime();
+            console.log((endTime - startTime)/1000 + "s");
+        });
+    </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
+    
+    <script src="/static/js/jquery.bxslider.min.js"></script>
+    <script>
+        //박스슬라이더
+        $(function () {
+            $(".fnBxSlider").bxSlider({
+                mode: 'fade',
+                auto: true,
+                autoControls: false,
+                speed: 500,
+                duration: 6000
+            });
+        });
+    </script>
+</body>
+
+</html>

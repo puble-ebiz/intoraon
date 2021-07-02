@@ -1,0 +1,222 @@
+@@include('src/template/include/_head.html')
+
+<link rel="stylesheet" href="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/static/css/rent/init.css">
+<!-- <link rel="stylesheet" href="/static/css/rent/init.css"> -->
+
+</head>
+
+<body class="page-rent">
+
+    @@include('src/template/include/_header.html')
+
+    <div class="contents group-contents">
+        <div class="sub">
+            <div class="sub_top_menu">
+                <h4 class="page_title">장단기숙박</h4>
+                <h6 class="page_sub_title">
+                    수려한 녹음, 푸른 하늘과 특급호텔의 안락함을 내집처럼 매일 매일 만나보세요!
+                </h6>
+            </div>
+        </div>
+    </div>
+    <div class="rent-wrap clr">
+        <div class="img-area">
+            <figure class="nth-1"><img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/rent/detail/01.jpg" alt="강릉 씨베이호텔 소개이미지"></figure>
+
+            <figure class="nth-2"><img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/rent/detail/02_1.jpg" alt="강릉 씨베이호텔 소개이미지"></figure>
+
+            <div class="grid-wrap">
+                <div class="grid-contents grid-type-1">
+                    <table class="tbl-base tbl-1">
+                        <colgroup>
+                            <col style="width:23%">
+                            <col style="width:14%">
+                            <col style="width:23%">
+                            <col style="width:40%">
+                        </colgroup>
+                        <thead class="rowgroup">
+                            <tr>
+                                <th>객실타입</th>
+                                <th>숙박기간</th>
+                                <th>이용시 특혜</th>
+                                <th>이용기간</th>
+                            </tr>
+                        </thead>
+                        <tbody class="rowgroup">
+                            <tr>
+                                <td>
+                                    <!-- 스탠다드룸<br> -->
+                                    스위트룸<br>
+                                    디럭스룸<br>
+                                    슈페리어룸
+                                </td>
+                                <td>
+                                    <!-- 7일<br> -->
+                                    14일<br>
+                                    1개월<br>
+                                    6개월
+                                </td>
+                                <td class="nth-3">
+                                    <span class="fg-red-1 fwe-1">광과금 일체 포함<br>
+                                        (전기, 수도요금 등)</span>
+                                </td>
+                                <td class="nth-4">
+                                    <span class="fwe-1">7일부터 6개월까지 이용가능!</span>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+								<td colspan="4" class="ta-left">
+									<p class="row">
+										<span class="dot">※</span>
+										<span class="txt">
+											장/단기 이용시 주중은 저렴하게 제공기능하나, <span class="co-blue">주말(토요일, 5월5일, 12월31일 등 극성수일)에는 상시 만실</span>이며 평균 20만원 내외에 판매되는 점 고려 후 판단 부탁드립니다.
+										</span>
+									</p>
+								</td>
+							</tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="tbl-tit">이용 시 예상 요금을 알아볼까요?</h2>
+                <div class="grid-contents grid-type-2">
+                    <table class="tbl-base tbl-2">
+                        <colgroup>
+                            <col style="width:18%">
+                            <col style="width:24%">
+                            <!-- <col> -->
+                        </colgroup>
+                        <thead class="rowgroup">
+                            <tr>
+                                <th>객실타입</th>
+                                <th>예상 체류기간</th>
+                                <th>이용 시 예상요금</th>
+                            </tr>
+                        </thead>
+                        <tbody class="rowgroup">
+                            <tr>
+                                <td class="nth-1">
+                                    <p class="row clr">
+                                        <span class="rdo-box">
+                                            <input type="radio" name="room_type" class="rdo" id="radio-2">
+                                            <label for="radio-2" class="lbl"><span style="font-size:14px">스위트룸</span></label>
+                                        </span>
+                                    </p>
+                                    <p class="row clr">
+                                        <span class="rdo-box">
+                                            <input type="radio" name="room_type" class="rdo" id="radio-3">
+                                            <label for="radio-3" class="lbl"><span style="font-size:14px">디럭스룸</span></label>
+                                        </span>
+                                    </p>
+                                    <p class="row clr">
+                                        <span class="rdo-box">
+                                            <input type="radio" name="room_type" class="rdo" id="radio-3">
+                                            <label for="radio-3" class="lbl"><span style="font-size:14px">슈레이어룸</span></label>
+                                        </span>
+                                    </p>
+                                </td>
+                                <td class="nth-2">
+                                    <p class="row clr">
+                                        <span class="inp-box">
+                                            <label for="" class="lbl">체크인</label>
+                                            <input type="text" class="inp">
+                                        </span>
+                                    </p>
+                                    <p class="row clr">
+                                        <span class="inp-box">
+                                            <label for="" class="lbl">체크아웃</label>
+                                            <input type="text" class="inp">
+                                        </span>
+                                    </p>
+                                    <p class="row clr">
+                                        <span class="inp-box">
+                                            <label for="" class="lbl">이용기간</label>
+                                            <input type="text" class="inp">
+                                        </span>
+                                    </p>
+                                    <p class="row clr">
+                                        <span class="inp-box">
+                                            <label for="" class="lbl">인원수</label>
+                                            <select name="" id="" class="slt">
+                                                <option value="">2</option>
+                                                <option value="">7</option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                    <div class="row">
+                                        <button type="button" class="btn-base btn-gray flt-r">예상요금</button>
+                                    </div>
+                                </td>
+                                <td class="clr nth-3">
+                                    <div class="split-1">
+                                        <dl>
+                                            <dt>객실요금</dt>
+                                            <dd>0원</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>봉사료</dt>
+                                            <dd>0원</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>세금</dt>
+                                            <dd>0원</dd>
+                                        </dl>
+                                        <hr class="sun">
+                                        <dl>
+                                            <dt>총 예상요금</dt>
+                                            <dd>0원</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="split-2">
+                                        <span class="fg-red-1">
+                                            이용기간 일별 표준요금 기준이며,<br>
+                                            장기이용은 전화 상담시 이용일자에 따라<br>
+                                            최대 40~50%의 할인요금을 안내해드립니다.<br>
+                                        </span>
+                                        <p class="row clr">
+                                            <button type="button" class="btn-base btn-gray">문의신청 010-8817-1634</button>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <figure class="nth-2"><img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/rent/detail/02_2.jpg" alt="강릉 씨베이호텔 소개이미지"></figure>
+
+            <figure class="nth-3"><img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/rent/detail/03.jpg" alt="강릉 씨베이호텔 소개이미지"></figure>
+            <figure class="nth-4">
+                <img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/rent/detail/04.jpg" alt="강릉 씨베이호텔 소개이미지">
+                <a href="none" target="_blank" title="새 창" class="btn-linkOc2">
+                    <img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/rent/detail/btn_moreRoom.png" alt="강릉 씨베이호텔  객실안내 페이지로 이동">
+                </a>
+            </figure>
+            <figure class="nth-5"><img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/rent/detail/05.jpg" alt="강릉 씨베이호텔 소개이미지"></figure>
+        </div>
+    </div>
+    <!-- //.rent-wrap -->
+    <!--버튼_스크롤 탑으로-->
+    <div class="btn-scroll-move-box">
+        <a href="javascript:;" class="btn-move-top" role="button" onclick="$( 'html, body' ).animate( { scrollTop : 0 }, 400 )">
+            <img src="http://img.monopalace.com/landing/inquiry/go_top.png" alt="위로">
+        </a>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                let scroll_H = $(document).scrollTop();
+                if(scroll_H > 500){
+                    $(".btn-scroll-move-box").show();
+                }
+                else{
+                    $(".btn-scroll-move-box").hide();
+                }
+            });
+        })
+    </script>
+    <!--///버튼_스크롤 탑으로-->
+    @@include('src/template/include/_footer.html')
+</body>
+
+</html>

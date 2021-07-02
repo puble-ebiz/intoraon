@@ -1,0 +1,36 @@
+[
+    {
+        "name": "dist-static",
+        "host": "192.168.20.138",
+        "protocol": "sftp",
+        "port": 229,
+        "username": "ebizimg",
+        "remotePath": "/home2/ebizimg/ebiznetworks.co.kr/design/lhc/intoraon.co.kr/static",
+        "privateKeyPath": "D:/FTP_Lite/key.ppk",
+        "context": "./dist/static/",
+        "passphrase": true
+    },
+    {
+        "name": "intraon-static",
+        "host": "192.168.20.138",
+        "protocol": "sftp",
+        "port": 229,
+        "username": "ebizimg",
+        "remotePath": "/home2/ebizimg/intoraon.co.kr/static",
+        "privateKeyPath": "D:/FTP_Lite/key.ppk",
+        "context": "./dist/static/",
+        "passphrase": true
+    },
+    {
+        "name": "dist-all",
+        "host": "192.168.20.138",
+        "protocol": "sftp",
+        "port": 229,
+        "username": "ebizimg",
+        "remotePath": "/home2/ebizimg/ebiznetworks.co.kr/design/lhc/intoraon.co.kr",
+        "privateKeyPath": "D:/FTP_Lite/key.ppk",
+        "context": "./dist/",
+        "passphrase": true
+    }
+    
+]

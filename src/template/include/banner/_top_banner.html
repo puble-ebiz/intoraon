@@ -1,0 +1,54 @@
+
+<!--최상단 배너(숙박대전)-->
+<div class="top-banner-lodgment">
+    <!--수정부분-->
+    <a class="btn-go-area">
+    <!--//수정부분-->
+        <div class="img-box">
+            <img class="img-pc" src="http://img.ocean2you.co.kr/renew/event/banner_top.jpg" alt="탑배너">
+            <img class="img-mobile" src="http://img.ocean2you.co.kr/renew/event/banner_top_m.jpg" alt="탑배너_모바일">
+        </div>
+    </a>
+</div>
+
+<script>
+    //최상단 배너용 스크립트(메인페이지-상단메뉴밀기용)
+    $(document).ready(function(){
+        
+        checkTopBanner();
+        $(window).scroll(function(){
+            checkTopBanner();
+        });
+        $(window).resize(function(){
+            checkTopBanner();
+        });
+     
+    });
+
+    let checkTopBanner = function(){
+        let menuHeight = $(".top-banner-lodgment").outerHeight();
+        let topHeader = $(".header, .main");
+
+        let scrollPos = $(document).scrollTop();
+        // console.log(scrollPos);
+        if(scrollPos < 200){
+            topHeader.css("top", menuHeight);
+        }
+        else{
+            topHeader.css("top", 0);
+        }
+    }
+
+    //==팝업 오픈(추가)==
+    $(".btn-go-area").on("click", function(){
+        //팝업 보이기
+        $(".popup-lodgment").show();
+        //바디고정
+        $("body").addClass("pop-overflow-hidden");
+    });
+    //==팝업 오픈(추가)==
+
+</script>
+
+<!--////최상단 배너(숙박대전)-->
+

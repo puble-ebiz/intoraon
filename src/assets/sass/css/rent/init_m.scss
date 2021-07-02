@@ -1,0 +1,42 @@
+@charset "utf-8";
+@import url('http://static.go.co.kr/css/renew/reset.css');
+a:link,
+a:visited {
+    color: inherit;
+}
+.br_sub {
+    display: none;
+}
+#product_info.type-2 {
+    margin-top: 1px;
+    background: #fff;
+	.roomINFO {
+		td {
+			.row {
+				position: relative;
+				word-break: keep-all;
+				.dot {
+					position: absolute;
+					left: 0;
+				}
+				.txt {
+					display: inline-block;
+					padding-left: 15px;
+				}
+			}
+		}
+	}
+}
+
+
+//버튼_스크롤 탑으로
+.btn-scroll-move-box{
+    display: none;
+    z-index: 10;
+    position: fixed;
+    bottom: 2%;
+	right: 2%;
+	img{
+		width: 50px;
+	}
+}

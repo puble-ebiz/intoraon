@@ -1,0 +1,45 @@
+@@include('src/template/include/_head.html')
+</head>
+
+<body>
+
+    @@include('src/template/include/_header.html')
+
+    <div class="restbar">
+        @@include('src/template/include/facilities/_sub_top.html', {
+        "title": "아테네가든",
+        "sub_title": "호텔 14층에 위치한 야외정원에서 다양한 이벤트와 파티를 진행하실 수 있습니다."
+        })
+
+        <div class="sub container">
+            <div class="sub_item_box">
+                <div class="sub_item_wrap">
+                    <div class="sub_item">
+                        <div class="slick_slider">
+                            <div class="icon-prev"><i class="icon-33"></i></div>
+                            <div class="icon-next"><i class="icon-32"></i></div>
+                            <div class="slick_basic">
+                                <div><img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/facilities/athen/001.jpg" alt="사진"></div>
+                            </div>
+                        </div>
+                        <div class="item_info">
+                            <div class="info_wrap">
+                                <h5 class="info_title">위치안내</h5>
+                                <div class="info_content">14층 야외</div>
+                            </div>
+                            <div class="info_wrap">
+                                <h5 class="info_title">운영안내</h5>
+                                <div class="info_content">빔프로젝터, 무선마이크 등 사용 가능</div>
+                            </div>
+                            @@include('src/template/dining/_tell.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @@include('src/template/include/_footer.html')
+</body>
+
+</html>

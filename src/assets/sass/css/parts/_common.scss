@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+@import "./variables";
+@import "./mixins";
+
+.m-0 {
+    margin: 0 !important;
+}
+
+.c-black {
+    color: #333333 !important;
+}
+
+.c-red {
+    color: $c-red !important;
+}
+
+.c-gray {
+    color: #8c8c8c !important;
+}
+
+.c-theme {
+    color: $theme-color !important;
+}
+
+.c-theme2 {
+    color: $theme-color2 !important;
+}
+
+.fz-16 {
+    font-size: 16px !important;
+}
+
+.fw-b {
+    font-weight: 700 !important;
+}
+
+.bk-menu {
+    background: $bk-menu-color !important;
+}
+
+.bk-menu .bk-list li {
+    border-top-color: #fff !important;
+}
+
+.bk-menu .bk-list li a:hover {
+    background: darken($bk-menu-color, 7%) !important;
+}
+
+.ft-ntss {
+    font-family: $font-ntss !important;
+}
+
+.child-ft-ntss {
+    * {
+        font-family: $font-ntss !important;
+    }
+}
+
+.bk-menu .btn-bk {
+    background: url("http://img.intoraon.co.kr/common/ico_bk_menu.png") no-repeat center 22px !important;
+}

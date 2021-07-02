@@ -1,0 +1,45 @@
+@@include('src/template/include/_head.html')
+</head>
+
+<body>
+
+    @@include('src/template/include/_header.html')
+
+    <div class="restbar">
+        @@include('src/template/include/facilities/_sub_top.html', {
+        "title": "오키드룸",
+        "sub_title": "96㎡(29평) 규모의 연회장으로 소규모 토의에 가장 최적화된 공간을 제공합니다."
+        })
+
+        <div class="sub container">
+            <div class="sub_item_box">
+                <div class="sub_item_wrap">
+                    <div class="sub_item">
+                        <div class="slick_slider">
+                            <div class="icon-prev"><i class="icon-33"></i></div>
+                            <div class="icon-next"><i class="icon-32"></i></div>
+                            <div class="slick_basic">
+                                <div><img src="http://design.ebiznetworks.co.kr/lhc/intoraon.co.kr/img/facilities/orchid/001.jpg" alt="사진"></div>
+                            </div>
+                        </div>
+                        <div class="item_info">
+                            <div class="info_wrap">
+                                <h5 class="info_title">위치안내</h5>
+                                <div class="info_content">지하 2층</div>
+                            </div>
+                            <div class="info_wrap">
+                                <h5 class="info_title">운영안내</h5>
+                                <div class="info_content">빔프로젝터, 무선마이크 등 사용 가능</div>
+                            </div>
+                            @@include('src/template/dining/_tell.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @@include('src/template/include/_footer.html')
+</body>
+
+</html>

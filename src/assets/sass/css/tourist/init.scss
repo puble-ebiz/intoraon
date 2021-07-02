@@ -1,0 +1,350 @@
+@charset 'utf-8';
+@import 'src/assets/sass/css/parts/common';
+
+.group-contents {
+
+    h1,
+    h2,
+    h3 {
+        font-weight: 400;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+    }
+
+    figure>img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+$fg-group: #0e5fda;
+$bg-group: #6d99da;
+
+//@media (min-width: 992px) {
+.sub .sub_top_menu {
+    // padding-bottom: 5px;
+}
+
+.sub .sub_item_box .sub_item_wrap .sub_item {
+    padding: 0;
+    padding-top: 35px;
+}
+
+/* 공통 */
+section[class*=-sec] {
+    padding-left: 70px;
+    padding-right: 70px;
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+hr {
+    width: 1000px;
+    border: 0;
+    border-top: 1px solid #dedede;
+    margin: 35px auto;
+}
+
+/*서브메뉴*/
+.tourist-sub-menu{
+    margin-bottom: 25px;
+    .sub-menu-ul{
+        justify-content: center;
+        display: flex;;
+        li{
+            background-color: #efefef;
+            width: 228px;
+            a{
+                padding: 10px 0;
+                display: block;
+                text-align: center;
+                color: #2d2d2d;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+        .active{
+            background-color: #222;
+            a{
+                color: white;
+            }
+        }
+    }
+}
+
+/* 관광지 */
+.tourist-sec {
+    img{width: 100%;}
+    position: relative;
+    padding-bottom: 50px;
+    /*인트로*/
+    .intro-ul{
+        margin-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        li{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            background-color: #e6f8ff;
+            .img-box{
+                width: 48.75%;
+                img{
+                    width: 100%;
+                    // padding-right: 10px;
+                }
+            }
+            .txt-contents{
+                width: 51.25%;
+                padding-top: 38px;
+                padding-left: 24px;
+                .title-box{
+                    p{
+                        word-break: keep-all;
+                    }
+                    .p-sub{
+                        letter-spacing: -1px;
+                        color: #7a2fc0;
+                        font-size: 16px;
+                        .span-hot{
+                            color: white;
+                            background-color: #7a2fc0;
+                            padding: 1px 3px;
+                            letter-spacing: 0;
+                            margin-right: 2px;
+                        }
+                    }
+                    .p-title{
+                        letter-spacing: -1px;
+                        color: #0059bd;
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-top: 12px;
+                        margin-bottom: 16px;
+                    }
+                }
+                .txt-box{
+                    p{
+                        font-size: 15px;
+                        margin-bottom: 1px;
+                        letter-spacing: -1px;
+                        word-break: keep-all;
+                    }
+                }
+            }
+            /*이미지 오른쪽으로*/
+            &:nth-of-type(even){
+                .img-box{
+                    order: 2;
+                    // img{
+                    //     padding-right: 0;
+                    // }
+                }    
+            }
+
+        }
+    }
+    //인트로 마지막
+
+    .h3-1 {
+        font-size: 25px;
+        text-align: center;
+        margin: 0 auto;
+        font-family: "Nanum Gothic", sans-serif;
+        color: #545454;
+    }
+
+    .h3-2 {
+        font-size: 25px;
+        text-align: center;
+        margin: 25px auto 0;
+        font-family: "Nanum Gothic", sans-serif;
+        color: #545454;
+    }
+
+    .ul-list {
+        margin-top: 0px;
+        text-align: center;
+        font-size: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .li-item {
+            position: relative;
+            display: inline-block;
+            // margin-left: 20px;
+            margin-top: 20px;
+            width: 235px;
+
+            figure {
+                position: relative;
+
+                >img {
+                    width: 100%;
+                }
+                >figcaption {
+                    display: block;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    padding: 7px 0 6px;
+                    padding-right: 5px;
+                    text-align: right;
+                    color: #fff;
+                    background: #000;
+                    background: rgba(0, 0, 0, .7);
+                    box-sizing: border-box;
+                    line-height: 1.3;
+                    font-size: 16px;
+
+                    .f-sm {
+                        font-size: 14px;
+                        letter-spacing: -1.2px;
+                    }
+                }
+            }
+        }
+    }
+    .map-guide{
+        .map-main-box{
+            width: 100%;
+            margin-bottom: 1.6%;
+        }
+        .map-sub-ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: row;
+            &>li{
+                width: 49.2%;
+                margin-bottom: 1.6%;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1199px) {
+    .tourist-sec {
+        .intro-ul{
+            li{
+                .txt-contents{
+                    padding-top: 15px;
+                    padding-left: 14px;
+                    .title-box{
+                        .p-sub{
+                            font-size: 14px;
+                        }
+                        .p-title{
+                            font-size: 17px;
+                            font-weight: 600;
+                            margin-top: 10px;
+                            margin-bottom: 14px;
+                        }
+                    }
+                    .txt-box{
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sub .sub_item_box .sub_item_wrap .sub_item {
+        padding: 20px 0;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    /* 공통 */
+    section[class*=-sec] {
+        padding-left: 0px;
+        padding-right: 0px;
+        p {
+            padding: 0;
+            margin: 0;
+        }
+    }
+    /*주변 광관지*/
+    .tourist-sec {
+        margin: 0 auto;
+        width: 95%;
+        padding-bottom: 40px;
+        .intro-ul{
+            margin-top: 0;
+            li{
+                // margin-top: 0;
+                .img-box{
+                    width: 100%;
+                }
+                .txt-contents{
+                    width: 100%;
+                    padding-top: 20px;
+                    padding-left: 12px;
+                    padding-bottom: 16px;;
+                    order: -1;
+                    .title-box{
+                        .p-sub{
+                            font-size: 14px;
+                        }
+                        .p-title{
+                            font-size: 16px;
+                            // font-weight: 500;
+                        }
+                    }
+                    .txt-box{
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .h3-1 {
+            font-size: 18px;
+        }
+
+        .h3-2 {
+            font-size: 18px;
+        }
+
+        .ul-list {
+            .li-item {
+                width: 49%;
+
+                figure {
+                     >figcaption {
+                        font-size: 14px;
+                     }
+                }
+            }
+        }
+        .map-guide{
+            .map-sub-ul{
+                &>li{
+                    width: 100%;
+                    margin-bottom: 3%;
+                }
+            }
+        }
+    }
+
+}

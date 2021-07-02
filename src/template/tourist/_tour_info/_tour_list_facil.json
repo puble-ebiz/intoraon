@@ -1,0 +1,50 @@
+[
+{
+    "imgPath":"facil01.jpg",
+    "name":"아리랑박물관",
+    "time":"차량 18분 소요",
+    "distance":"(11km 거리)"
+},
+{
+    "imgPath":"facil02.jpg",
+    "name":"삼탄아트마인",
+    "time":"차량 40분 소요 ",
+    "distance":"(35km 거리)"
+},
+{
+    "imgPath":"facil03.jpg",
+    "name":"어름치 갤러리",
+    "time":"차량 18분 소요",
+    "distance":"(10km 거리)"
+},
+{
+    "imgPath":"facil04.jpg",
+    "name":"고생대자연사박물관",
+    "time":"차량 40분 소요",
+    "distance":"(20km 거리)"
+},
+{
+    "imgPath":"facil05.jpg",
+    "name":"하이원카지노",
+    "time":"차량 40분 소요",
+    "distance":"(25km 거리)"
+},
+{
+    "imgPath":"facil06.jpg",
+    "name":"아리랑학교 추억 박물관",
+    "time":"차량 30분 소요",
+    "distance":"(14km 거리)"
+},
+{
+    "imgPath":"facil07.jpg",
+    "name":"사북 탄광문화관광촌",
+    "time":"차량 20분 소요",
+    "distance":"(15km 거리)"
+},
+{
+    "imgPath":"facil08.jpg",
+    "name":"아라리인형의집",
+    "time":"차량 10분 소요",
+    "distance":"(5km 거리)"
+}
+]

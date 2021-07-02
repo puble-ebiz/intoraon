@@ -1,0 +1,463 @@
+@charset "utf-8";
+
+@import './parts/common';
+
+em,
+address {
+    font-style: normal !important;
+}
+
+.show-sm,
+.show-md {
+    display: none !important;
+}
+
+
+.footer{
+    text-align: left;
+    &>.group{
+        width: 1002px;
+    }
+    
+}
+
+@media (max-width:1002px){
+    .footer{
+        &>.group{
+            width: 100% !important;
+            .terms-bar{
+                li{
+                    color: #9A9A9A !important;
+                    a{
+                        color: #9A9A9A !important;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.footer address{
+    color: #9A9A9A;
+}
+
+@include screen-min(992px) {
+    .footer {
+        padding: 50px 0;
+        background: #2F2F2F;
+        color: #9A9A9A ;
+        font-weight: normal;
+        .terms-bar {
+            padding-bottom: 25px;
+
+            .terms-list {
+                color: inherit;
+                font-size: 0;
+                text-align: center;
+
+                >li {
+                    display: inline-block;
+                    font-size: 14px;
+
+                    &.l {
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+
+        .sfa {
+            border-top: 1px solid #4C5155;
+
+            .split {
+                position: relative;
+            }
+
+            .split-1 {
+                float: left;
+                // padding-top: 10px;
+            }
+
+            .split-2 {
+                float: right;
+                padding-right: 30px;
+                margin-top: 22px;
+            }
+
+            .logo-box {
+                position: relative;
+                padding: 20px 0;
+
+                img {
+                    display: inline-block;
+
+                    &.logo-goco {
+                        height: 40px;
+                    }
+                }
+
+                /* 패밀리 사이트 */
+                .family-wrapper {
+                    $wd: 140px;
+                    $pm: 10px;
+
+                    .family-site {
+                        position: absolute;
+                        //position: relative;
+                        top: 39px;
+                        left: 269px;
+                        font-size: 13px;
+                        line-height: 22px;
+                        color: #a3a3a3;
+
+                        .family-site-label {
+                            cursor: pointer;
+                            position: relative;
+                            box-sizing: border-box;
+                            display: inline-block;
+                            width: $wd;
+                            height: 24px;
+                            padding-left: $pm;
+                            line-height: 24px;
+                            border: 1px solid #4c4c4c;
+                        }
+
+                        .site {
+                            z-index: 9999;
+                            position: absolute;
+                            display: none;
+                            box-sizing: border-box;
+                            left: 0;
+                            bottom: 23px;
+                            width: $wd;
+                            padding-bottom: $pm;
+                            border: 1px solid #4c4c4c;
+                            background-color: #323232;
+
+                            li {
+                                .fam_btn {
+                                    padding: 5px $pm;
+                                    line-height: 16px;
+                                    word-break: keep-all;
+                                }
+
+                                &.group-name {
+                                    margin-top: $pm;
+
+                                    .fam_btn {
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .addr-bar {
+                .addr {
+                    font-size: 14px;
+                    word-break: keep-all;
+
+                    .info {
+                        margin-top: 20px;
+                        @include fst-mt0;
+
+                        .item {
+                            margin-right: 5px;
+                        }
+                    }
+
+                    .copyright {
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+            .inquiry-bar {
+                .item {
+                    display: block;
+                    margin-top: 16px;
+                    @include fst-mt0;
+                    cursor: default;
+
+                    p {
+                        letter-spacing: 0.5px;
+                        line-height: 1.5;
+                    }
+
+                    span {
+                        @include va;
+                        letter-spacing: -1px;
+                        font-size: 14px;
+                        color: #b7b7b7;
+                    }
+
+                    .s1 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #88c6ff;
+
+                        .s1-2 {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    .s2 {
+                        font-size: 16px;
+                        color: #fff;
+
+                        .i-tel {
+                            width: 15px;
+                            margin-right: 3px;
+                        }
+                    }
+
+                    .s3 {
+                        display: block;
+                        position: relative;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include screen-min-max(992px, 1200px) {
+    .show-md {
+        display: block !important;
+    }
+
+    .footer {
+        .sfa {
+            .split-1 {
+                padding-left: 10px;
+            }
+
+            .split-2 {
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+@include screen-max(991px) {
+    .footer {
+        padding: 25px 0;
+        background: #2F2F2F;
+        color: #9A9A9A;
+        font-weight: normal;
+
+        .terms-bar {
+            padding-bottom: 15px;
+
+            .terms-list {
+                color: inherit;
+                font-size: 0;
+                text-align: center;
+
+                >li {
+                    display: inline-block;
+                    font-size: 11.5px;
+
+                    &.l {
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+
+        .sfa {
+            margin: 0 10px;
+            border-top: 1px solid #4C5155;
+
+            .split {
+                position: relative;
+            }
+
+            .split-1 {
+                margin-top: 5px;
+            }
+
+            .split-2 {
+                margin-top: 10px;
+            }
+
+            .logo-box {
+                position: relative;
+                padding: 20px 0;
+                //overflow: hidden;
+                img {
+                    display: inline-block;
+
+                    &.logo {
+                        height: 30px;
+                    }
+
+                    &.logo-goco {
+                        height: 30px;
+                    }
+                }
+
+                /* 패밀리 사이트 */
+                .family-wrapper {
+                    $wd: 115px;
+                    $pm: 6px;
+
+                    .family-site {
+                        position: absolute;
+                        //position: relative;
+                        top: 26px;
+                        left: 200px;
+                        font-size: 11px;
+                        line-height: 16px;
+                        color: #a3a3a3;
+
+                        .family-site-label {
+                            cursor: pointer;
+                            position: relative;
+                            box-sizing: border-box;
+                            display: inline-block;
+                            width: $wd;
+                            height: 24px;
+                            padding-left: $pm;
+                            line-height: 24px;
+                            border: 1px solid #4c4c4c;
+                        }
+
+                        .site {
+                            z-index: 9999;
+                            position: absolute;
+                            display: none;
+                            box-sizing: border-box;
+                            left: 0;
+                            bottom: 23px;
+                            width: $wd;
+                            padding-bottom: $pm;
+                            border: 1px solid #4c4c4c;
+                            background-color: #323232;
+
+                            li {
+                                .fam_btn {
+                                    padding: 3px $pm;
+                                    line-height: 13px;
+                                    word-break: keep-all;
+                                }
+
+                                &.group-name {
+                                    margin-top: $pm;
+
+                                    .fam_btn {
+                                        font-weight: 700;
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .addr-bar {
+                .addr {
+                    font-size: 12px;
+                    word-break: keep-all;
+
+                    .info {
+                        margin-top: 12px;
+                        @include fst-mt0;
+
+                        .item {
+                            margin-right: 5px;
+                        }
+                    }
+
+                    .copyright {
+                        margin-top: 12px;
+                        font-size: 11.5px;
+                    }
+                }
+            }
+
+            .inquiry-bar {
+                .item {
+                    display: block;
+                    margin-top: 10px;
+                    @include fst-mt0;
+
+                    p {
+                        letter-spacing: 0.5px;
+                        line-height: 1.5;
+                    }
+
+                    span {
+                        @include va;
+                        letter-spacing: -1px;
+                        font-size: 12px;
+                        color: #b7b7b7;
+                    }
+
+                    .s1 {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #88c6ff;
+
+                        .s1-2 {
+                            margin-left: 5px;
+                        }
+                    }
+
+                    .s2 {
+                        font-size: 13px;
+                        color: #fff;
+
+                        .i-tel {
+                            width: 13px;
+                            margin-right: 3px;
+                        }
+                    }
+
+                    .s3 {
+                        display: block;
+                        position: relative;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include screen-max(320px) {
+    .footer {
+        .sfa {
+            .logo-box {
+
+                /* 패밀리 사이트 */
+                .family-wrapper {
+                    $wd: 110px;
+
+                    .family-site {
+                        left: 194px;
+                        font-size: 10px;
+
+                        .family-site-label {
+                            width: $wd;
+                        }
+
+                        .site {
+                            width: $wd;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

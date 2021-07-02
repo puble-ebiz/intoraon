@@ -1,0 +1,321 @@
+@charset "utf-8";
+// @import url('http://static.go.co.kr/css/renew/m/reset.css');
+// @import url(https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css);
+
+@media (min-width: 992px) {
+    .sub .sub_top_menu {
+        padding-bottom: 5px;
+    }
+
+    .sub .sub_item_box .sub_item_wrap .sub_item {
+        padding: 0;
+        padding-top: 35px;
+    }
+}
+
+.rent-wrap {
+    position: relative;
+    padding: 30px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.rent-wrap .img-area {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.rent-wrap .img-area figure {
+    position: relative;
+}
+
+.rent-wrap .img-area figure img {
+    display: block;
+    max-width: 100%;
+}
+
+.rent-wrap .img-area .tbl-tit {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    font-family: "NanumSquareRound", sans-serif;
+}
+
+.rent-wrap .grid-wrap {
+    // background: #E6EBFF;
+    // background: #e1e4ed;
+    // background-color: black;
+    // background-color: black;
+    background-color: #eee5de;
+}
+
+.rent-wrap .grid-wrap .grid-contents {
+    position: relative;
+    padding-top: 10px;
+}
+
+.rent-wrap .img-area figure+.rent-wrap .grid-wrap .grid-contents {
+    margin-top: -20px;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base {
+    table-layout: fixed;
+    width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-top: 1px solid #989898;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base thead,
+.rent-wrap .grid-wrap .grid-contents .tbl-base tbody {}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base thead th,
+.rent-wrap .grid-wrap .grid-contents .tbl-base tbody td {
+    height: 40px;
+    border-bottom: 1px solid #989898;
+    vertical-align: middle;
+    line-height: 1.6;
+    font-family: "Nanum Gothic", sans-serif;
+    letter-spacing: -0.5px;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base thead th {
+    background: #dadada;
+    text-align: center;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base tbody td {
+    border-left: 1px solid #989898;
+    padding: 15px;
+    background: #fff;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base tbody td:first-child {
+    border-left: none;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-1 td {
+    text-align: center;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-1 td.nth-3 {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-1 td.nth-4 {
+    font-size: 20px;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 {}
+
+.rent-wrap .grid-wrap .grid-contents.grid-type-2 {
+    padding-bottom: 30px;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-1 {
+    text-align: center;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-2 .row {
+    margin-top: 5px;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-2 .inp-box {
+    display: block;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-2 .inp-box .lbl {
+    float: left;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-2 .inp-box .lbl+input[type=text],
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-2 .inp-box .lbl+select.slt {
+    float: right;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-2 .btn-gray {
+    margin-top: 5px;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-3 {}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-3 [class*=split-] {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-3 .split-1 {
+    width: 195px;
+    background: #f2f2f2;
+    padding: 8px 10px;
+    border: 1px solid #d7d7d7;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-3 .split-1 dl:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-3 .split-1 hr.sun {
+    border: none;
+    height: 1px;
+    background: #bcbcbc;
+    margin: 5px 0;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-3 .split-1 dl dt,
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-3 .split-1 dl dd {
+    display: inline-block;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-3 .split-1 dl dt {}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-3 .split-1 dl dd {
+    color: #ea000c;
+    float: right;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-3 .split-2 {
+    width: 290px;
+    margin-left: 10px;
+    letter-spacing: -1px;
+}
+
+.rent-wrap .grid-wrap .grid-contents .tbl-base.tbl-2 td.nth-3 .split-2 .btn-gray {
+    margin-top: 10px;
+}
+
+.rent-wrap .grid-wrap .grid-contents .btn-base {
+    border: none;
+    box-shadow: none;
+}
+
+.rent-wrap .grid-wrap .grid-contents .btn-gray {
+    height: 36px;
+    text-align: center;
+    line-height: 2.5;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    background: url(http://img.go.co.kr/btn_callBG.png) no-repeat;
+    box-sizing: border-box;
+    padding: 0 20px;
+    min-width: 125px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.rent-wrap .grid-wrap .grid-contents .fg-red-1 {
+    color: #ea000c;
+}
+
+.rent-wrap .grid-wrap .grid-contents .fwe-1 {
+    font-weight: 700;
+}
+
+.rent-wrap .grid-wrap .grid-contents .flt-r {
+    float: right;
+}
+
+.rent-wrap .grid-wrap .grid-contents .rdo-box,
+.rent-wrap .grid-wrap .grid-contents .inp-box {}
+
+.rent-wrap .grid-wrap .grid-contents .rdo-box *,
+.rent-wrap .grid-wrap .grid-contents .inp-box * {
+    vertical-align: middle;
+    margin: 0;
+}
+
+.rent-wrap .grid-wrap .grid-contents .inp,
+.rent-wrap .grid-wrap .grid-contents .slt {
+    display: inline-block;
+    width: 125px;
+    height: 28px;
+    box-shadow: none;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+    text-indent: 5px;
+}
+
+.rent-wrap {
+    .row {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .img-area {
+        .grid-wrap {
+            // background: #CAEDFF;
+            // background: #E1E4ED;
+
+            .grid-contents {
+                .tbl-base.tbl-1 {
+                    .row {
+                        position: relative;
+                        word-break: keep-all;
+
+                        .dot {
+                            position: absolute;
+                            left: 0;
+                        }
+
+                        .txt {
+                            display: inline-block;
+                            padding-left: 20px;
+                        }
+                    }
+
+                    .co-blue {
+                        color: #0060FF;
+                    }
+                }
+
+                .tbl-base.tbl-2 {
+                    td {
+                        padding: 10px;
+
+                        .rdo-box {
+                            >* {
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+
+                            input[type='radio'] {
+                                position: relative;
+                                top: 1px;
+                            }
+                        }
+                    }
+
+                    td.nth-1 {
+                        text-align: left;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        figure.nth-4 {
+            .btn-linkOc2 {
+                position: absolute;
+                bottom: 60px;
+                left: 50%;
+                margin-left: -161.5px;
+            }
+        }
+    }
+}
+
+//버튼_스크롤 탑으로
+.btn-scroll-move-box{
+    display: none;
+    z-index: 10;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(600px);
+}

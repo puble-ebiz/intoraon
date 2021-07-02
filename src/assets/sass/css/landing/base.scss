@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+ol, ul{
+    list-style: none;
+}
+
+a:link,a:visited,a:hover,a:active{
+    color: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
+
+img{
+    width: 100%;
+    vertical-align: top;
+}
+
+button{
+    background-color: rgba(0, 0, 0, 0);
+}

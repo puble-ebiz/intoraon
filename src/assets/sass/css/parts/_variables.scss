@@ -1,0 +1,40 @@
+@charset "utf-8";
+// --------------
+// Scss변수
+// --------------
+// 폰트
+$font-ntss: ("Noto Sans KR", Sans-serif);
+$font-nnGothic: ("Nanum Gothic", Sans-serif);
+$font-nnSquare: ("Nanum Square", "NanumSquare", Sans-serif);
+$font-nnSquareR: ("NanumSquareRound", Sans-serif);
+
+// 주요 폰트 및 벌러
+$font-stack: $font-ntss;
+$font-color: #222;
+$primary-color: #337ab7;
+$primary-color-dark: #23527c;
+
+
+$navline-color: #478EE2;
+// $bk-menu-color: #978262;
+// $theme-color: #9e7351;
+// $main-bg: #e3dcd8;
+// $reservation-bar-bg: #765f4e;
+// $reservation-bar-btn: #4a3c31;
+// $reservation-bar-input: #836f5f;
+// $bk-menu-color: #1178BC;
+$bk-menu-color: #9c7e69;
+$theme-color: #e56804;
+$theme-color2: #925822;
+$main-bg: #f1f1f1;
+$reservation-bar-bg: #897562; 
+$reservation-bar-btn: #5b4734;
+$reservation-bar-input: #9b8774;
+
+$c-red: #e45000;
+
+// 색상
+$fg-blue: #ff6c00;
+
+// 배경
+$bg-blue: #1178bc;

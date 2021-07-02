@@ -1,0 +1,50 @@
+[
+{
+    "imgPath":"nature01.jpg",
+    "name":"함백산",
+    "time":"차량 18분 소요",
+    "distance":"(11km 거리)"
+},
+{
+    "imgPath":"nature02.jpg",
+    "name":"오장폭포",
+    "time":"차량 40분 소요 ",
+    "distance":"(35km 거리)"
+},
+{
+    "imgPath":"nature03.jpg",
+    "name":"광대곡",
+    "time":"차량 18분 소요",
+    "distance":"(10km 거리)"
+},
+{
+    "imgPath":"nature04.jpg",
+    "name":"정선 양떼목장",
+    "time":"차량 40분 소요",
+    "distance":"(20km 거리)"
+},
+{
+    "imgPath":"nature05.jpg",
+    "name":"구문소",
+    "time":"차량 40분 소요",
+    "distance":"(25km 거리)"
+},
+{
+    "imgPath":"nature06.jpg",
+    "name":"화암동굴",
+    "time":"차량 30분 소요",
+    "distance":"(14km 거리)"
+},
+{
+    "imgPath":"nature07.jpg",
+    "name":"태백산",
+    "time":"차량 30분 소요",
+    "distance":"(17km 거리)"
+},
+{
+    "imgPath":"nature08.jpg",
+    "name":"민둥산",
+    "time":"차량 10분 소요",
+    "distance":"(5km 거리)"
+}
+]

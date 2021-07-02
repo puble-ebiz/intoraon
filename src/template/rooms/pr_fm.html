@@ -1,0 +1,85 @@
+@@include('src/template/include/_head.html')
+</head>
+
+<body class="page-rooms">
+
+    @@include('src/template/include/_header.html')
+
+    <div class="sub room_detail">
+        <div id="slider_room" class="slider_container room">
+            <div data-u="slides" class="slides">
+                <div data-p="112.50"><img data-u="image" class="room-visibility" src="http://img.intoraon.co.kr/rooms/dx_twin/002.jpg
+                    " alt="객실사진" /></div>
+                <div data-p="112.50"><img data-u="image" class="room-visibility" src="http://img.intoraon.co.kr/rooms/dx_twin/003.jpg
+                    " alt="객실사진" /></div>
+                <div data-p="112.50"><img data-u="image" class="room-visibility" src="http://img.intoraon.co.kr/rooms/dx_ondol/002.jpg
+                    " alt="객실사진" /></div>
+                <div data-p="112.50"><img data-u="image" class="room-visibility" src="http://img.intoraon.co.kr/rooms/dx_twin/comm_dx001.jpg" alt="객실사진" /></div>
+                <div data-p="112.50"><img data-u="image" class="room-visibility" src="http://img.intoraon.co.kr/rooms/dx_ondol/comm_dx002.jpg" alt="객실사진" /></div>
+            </div>
+            <span u="arrowleft" class="jssor-sprite arow-left" style="width: 21px; height: 32px; top: 290px; left: 20px;"></span>
+            <span u="arrowright" class="jssor-sprite arow-right" style="width: 21px; height: 32px; top: 290px; right: 20px"></span>
+        </div>
+
+        @@include('src/template/include/rooms/_sub_top.html', {
+        "title": "프리미어 패밀리",
+        "sub_title": "트윈룸과 온돌룸이 결합되어 15평의 여유로운 구성이 특징이며 다인실에 최적화된 룸타입입니다.<br>TV, 욕실, 어메니티 등이 2개조로 구성되어 편의성이 더욱 극대화되었습니다."})
+
+        <div class="container">
+            <div class="detail box_center">
+                <div class="box_right">
+                    <h3>RESERVATION</h3>
+                    <form method="get" name="myForm" id="myForm" action="https://be.wingsbooking.com/ko/VHG1/redirect">
+                        <div class="s_input">
+                            <input type="text" name="checkIn" class="datepicker_in" value="2019-06-18" placeholder="Check in" readonly />
+                            <i class="icon-12 label"></i>
+                        </div>
+                        <div class="s_input">
+                            <input type="text" name="checkOut" class="datepicker_ot" value="2019-06-19" placeholder="Check out" readonly />
+                            <i class="icon-12 label"></i>
+                        </div>
+                        <div class="s_input">
+                            <input type="number" class="set_period_date" value="1" min="1" onKeyup="number_check(this)" />
+                            <p class="ad_form_label">박</p>
+                        </div>
+                        <div class="s_input">
+                            <input type="number" name="rooms" value="1" min="1" onKeyup="number_check(this)" />
+                            <p class="ad_form_label">객실</p>
+                            <input type="hidden" name="adults" value="1" />
+                            <input type="hidden" name="children" value="" />
+                        </div>
+                        <div class="s_input">
+                            <button type="button" class="s_btn_gray b_100" onclick="on_submit()"><i class="icon-113"></i> SEARCH</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="box_left">
+                    <!-- <button class="amenity_more tooltip" onclick="amenity_more()" title="더보기"><span>+</span></button> -->
+                    @@include('src/template/include/rooms/_amenitys.html')
+                    <div class="description">
+                        <div class="title">
+                            <h5>ROOM QUICKVIEW</h5>
+                        </div>
+                        <div class="cont">
+                            <ul class="c_list">
+                                <li>객실 크기 : 27㎡ (8.1평)</li>
+                                <li>침대 타입 : 싱글 2개 + 온돌</li>
+                                <li>객실당 인원 : 기준인원 6인 / 최대인원 7인</li>
+                                <p>※기준인원 초과시 인원추가비용 현장결제(20,000원)</p>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    @@include('src/template/include/rooms/_description_amenity3.html')
+                    @@include('src/template/include/rooms/_description.html')
+                </div>
+                <!-- /.box_left -->
+            </div>
+        </div>
+    </div>
+
+    @@include('src/template/include/_footer.html')
+</body>
+
+</html>

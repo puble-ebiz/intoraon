@@ -1,0 +1,50 @@
+[
+{
+    "imgPath":"activities01.jpg",
+    "name":"화암카트체험장",
+    "time":"차량 30분 소요",
+    "distance":"(14km 거리)"
+},
+{
+    "imgPath":"activities02.jpg",
+    "name":"동강리프팅",
+    "time":"차량 35분 소요 ",
+    "distance":"(30km 거리)"
+},
+{
+    "imgPath":"activities03.jpg",
+    "name":"정선 레일바이크",
+    "time":"차량 50분 소요",
+    "distance":"(33km 거리)"
+},
+{
+    "imgPath":"activities04.jpg",
+    "name":"벅스랜드",
+    "time":"차량 50분 소요",
+    "distance":"(33km 거리)"
+},
+{
+    "imgPath":"activities05.jpg",
+    "name":"병방치 스카이워크",
+    "time":"차량 35분 소요",
+    "distance":"(22km 거리)"
+},
+{
+    "imgPath":"activities06.jpg",
+    "name":"병방치 짚와이어",
+    "time":"차량 35분 소요",
+    "distance":"(22km 거리)"
+},
+{
+    "imgPath":"activities07.jpg",
+    "name":"하이원 워터파크",
+    "time":"차량 3분 소요",
+    "distance":"(1.5km 거리)"
+},
+{
+    "imgPath":"activities08.jpg",
+    "name":"하이원 스키장",
+    "time":"차량 5분 소요",
+    "distance":"(3km 거리)"
+}
+]

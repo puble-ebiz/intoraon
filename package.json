@@ -9,6 +9,8 @@
   ],
   "dependencies": {
     "gulp": "^4.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp.spritesmith": "^6.12.1",
     "npm": "^6.5.0",
     "sass": "^1.35.1"
   },

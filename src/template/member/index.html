@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="ko-KR" class="no-js ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html lang="ko-KR" class="no-js ie9 lt-ie10"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="ko-KR">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>인투라온호텔</title>
+    <meta name="title" content="인투라온호텔">
+    <meta name="description" content="">
+    <meta name="keywords" content="인투라온호텔">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="인투라온호텔">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://img.intoraon.co.kr/sample/sns_thumb.jpg">
+
+    <!--폰트-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap" rel="stylesheet">
+
+    <!--공통 Css-->
+    <link rel=stylesheet href="http://static.intoraon.co.kr/goco/css/reset.css">
+    <link rel=stylesheet href="http://static.intoraon.co.kr/goco/css/common.css">
+    <link rel=stylesheet href="http://static.ocean2you.co.kr/css/new/swiper.min.css">
+    <!--개별 Css-->
+    <link rel=stylesheet href="http://static.intoraon.co.kr/goco/css/reservation/init.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/detectizr/1.5.0/detectizr.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        Modernizr.Detectizr.detect();
+
+        var base_url = "intoraon.co.kr";
+        var base_url2 = "intoraon.co.kr";
+    </script>
+
+    <!--공통 Js-->
+    <script src="http://static.intoraon.co.kr/goco/js/common.js"></script>
+    <script src="http://static.ocean2you.co.kr/js/new/swiper.min.js"></script>
+    <!--개별 Js-->
+    <script src="http://static.intoraon.co.kr/goco/js/reservation/init.js"></script>
+    <script src="http://static.ocean2you.co.kr/js/new/jwSlide_ver2.js"></script>
+    <script src="http://static.ocean2you.co.kr/js/new/picker_pc.js"></script>
+    <script src="http://static.ocean2you.co.kr/js/new/reserve_pc.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://static.hotelairsky.co.kr/svc/css/reserve.footer.css">
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+    <script>
+        function button_count(pno, bt_type) {
+            $.ajax({
+                url: "../reservation/state.php",
+                type: "post",
+                data: "mode=bt_count&pno=" + pno + "&bt_type=" + bt_type,
+                success: function (e) {
+
+                }
+            });
+        }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="http://static.ocean2you.co.kr/css/new/reset.css">
+    <link rel="stylesheet" type="text/css" href="http://static.ocean2you.co.kr/css/new/layout2.css">
+    <link rel="stylesheet" href="//static.go.co.kr/css/totalweb.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://static.ocean2you.co.kr/css/layout_init.css">
+    <link rel="stylesheet" href="http://static.ocean2you.co.kr/css/renew/member/init.css">
+
+    <script type="text/javascript" src="http://static.ocean2you.co.kr/js/new/jquery.cookie.js"></script>
+    <script type="text/javascript" src="http://static.ocean2you.co.kr/js/new/jquery.number.min.js"></script>
+
+</head>
+
+<body class="page-reservation">
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="gnb">
+                <div class="group inner">
+                    <h1 class="logo">
+                        <a href="http://intoraon.co.kr">
+                            <img src="http://img.intoraon.co.kr/goco/common/logo_rsv.jpg" alt="인투라온호텔"
+                                style="display:none;">
+                            <em style="line-height:60px;">인투라온호텔</em>
+                        </a>
+                    </h1>
+                    <nav class="g-nav">
+                        <ul class="menu cf">
+                            <li class="c-blue">
+                                <a href="/reserve"><img src="http://img.intoraon.co.kr/goco/common/icon/rsv.png"
+                                        alt="예약"> <span>예약하기</span></a>
+                            </li>
+                            <li class="c-blue">
+                                <a href="/history/?dd=Sws5TzdVKg==">
+                                    <img src="http://img.intoraon.co.kr/goco/common/icon/search.png" alt="검색">
+                                    <span>예약확인</span>
+                                </a>
+                            </li>
+                            <li class="c-blue">
+                                <a href="/member"><span>로그인</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="call-bar">
+                <div class="group inner">
+                    <img src="http://img.intoraon.co.kr/goco/common/icon/call.png" alt="전화">
+                    <span class="tt">예약문의</span>
+                    <span class="t">1666-1243</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="contents reservation">
+        </div>
+
+        <section class="login" id="setTop">
+            <div class="container">
+                <!-- 2021.07.07 로그인폼 수정 -->
+                <div id="customer">
+                    <!-- 2021.06.01 회원 로그인 리뉴얼-->
+                    <!-- 탭메뉴 추가 -->
+                    <div class="login-tabmenu">
+                        <a href="#none" class="btn-tabmenu active" style="border-bottom: 0px;">회원 간편 로그인</a>
+                        <a href="#none" class="btn-tabmenu" style="border-bottom: 1px solid rgb(0, 0, 0);">비회원 예약조회</a>
+                    </div>
+                    <!-- //탭메뉴 추가 -->
+
+                    <div class="login-tabcont">
+                        <!-- 회원 간편로그인 -->
+                        <div class="members tabFirst" style="display: block;">
+                            <ul class="snsLarge">
+                                <li class="naver">
+                                    <a href="javascript:total_login('naver')">
+                                        <!-- img를 감싸는 figure 부모 추가 -->
+                                        <figure>
+                                            <img src="http://img.ocean2you.co.kr/go/mobile/n_logo.jpg"
+                                                alt="네이버 아이디로 로그인">
+                                        </figure>
+                                        <span>네이버 아이디로 로그인</span>
+                                    </a>
+                                </li>
+                                <li class="kakao">
+                                    <a href="javascript:total_login('kakao')">
+                                        <!-- img를 감싸는 figure 부모 추가 -->
+                                        <figure>
+                                            <img src="http://img.ocean2you.co.kr/go/mobile/k2_logo.jpg"
+                                                alt="카카오톡 아이디로 로그인">
+                                        </figure>
+                                        <span>카카오톡 아이디로 로그인</span>
+                                    </a>
+                                </li>
+                                <li class="facebook">
+                                    <a href="javascript:total_login('facebook')">
+                                        <!-- img를 감싸는 figure 부모 추가 -->
+                                        <figure>
+                                            <img src="http://img.ocean2you.co.kr/go/mobile/f_logo.jpg"
+                                                alt="페이스북 아이디로 로그인">
+                                        </figure>
+                                        <span>페이스북 아이디로 로그인</span>
+                                    </a>
+                                </li>
+                                <li class="google">
+                                    <a href="javascript:total_login('google')">
+                                        <!-- img를 감싸는 figure 부모 추가 -->
+                                        <figure>
+                                            <img src="http://img.ocean2you.co.kr/go/mobile/g_logo.jpg"
+                                                alt="구글 아이디로 로그인">
+                                        </figure>
+                                        <span>구글 아이디로 로그인</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="alert">
+                                <div class="img">
+                                    <img src="http://img.ocean2you.co.kr/go/icon_alert.jpg">
+                                </div>
+                                <!-- 기존 div -> ul로 수정 -->
+                                <ul class="text">
+                                    <li>로그인/회원가입 시 이용약관, 개인정보취급방침에 동의하게 됩니다.</li>
+                                    <li>회원가입시 SMS/메일링 수신에 동의합니다.</li>
+                                    <li class="long">오션투유리조트 속초설악비치 호텔앤콘도 의 온라인 공식 대행 여행사 [고코투어]로 로그인됩니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //회원 간편로그인 -->
+                        <!-- 비회원 예약조회 추가 -->
+                        <div class="non-members" style="display: none;">
+                            <form>
+                                <input class="input-name" type="text" placeholder="예약자 이름입력">
+                                <input class="input-phone" type="text" placeholder="휴대폰번호 '-'없이 입력">
+                                <input class="input-reservation" type="text" placeholder="예약번호 입력">
+                                <button class="btn-search">비회원 예약조회</button>
+                            </form>
+
+
+                            <div class="alert">
+                                <div class="img">
+                                    <img src="http://img.ocean2you.co.kr/go/icon_alert.jpg">
+                                </div>
+                                <ul class="text">
+                                    <!-- 기존 div -> ul로 수정 -->
+                                    <li>웹브라우저에 오션투유 회원계정(SNS)으로 로그인 되어 있을 경우, 비회원으로 예약하신 정보는 노출되지 않으니, 로그인
+                                        여부를 꼭 체크해 주시기
+                                        바랍니다.</li>
+                                    <li>예약시 입력하신 본인의 휴대폰번호, 예약번호를 입력해주시기 바랍니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //비회원 예약조회 추가 -->
+                    </div>
+
+                </div>
+                <script>
+                    $(function () {
+                        $('.login-tabcont > div').hide();
+                        $('.tabFirst').show();
+                        $('.btn-tabmenu').click(function () {
+                            $(this).addClass('active');
+                            $(this).siblings().removeClass('active');
+                            $('.btn-tabmenu').siblings().css({
+                                borderBottom: 0
+                            });
+                            $(this).siblings().css({
+                                borderBottom: '1px solid #000'
+                            });
+
+
+                            var idx = $('.btn-tabmenu').index(this);
+                            $('.login-tabcont > div').hide();
+                            $('.login-tabcont > div').eq(idx).show();
+                        })
+                    });
+                </script>
+                <!-- 2021.07.07 로그인폼 수정 -->
+            </div>
+        </section>
+
+        <form name="test" method="get" action="https://www.go.co.kr/home/member/sns/brand_forward.php">
+            <input type="hidden" name="rtn" id="rtn" value="UVFvMFUyUUpjVW91Q2tkYkh5OU5jRVV4RFNzTQ==" />
+            <input type="hidden" name="brand_url" value="http://intoraon.co.kr" />
+            <input type="hidden" name="sns_type" id="sns_type" value="" />
+        </form>
+
+        <script type="text/javascript">
+            function total_login(sns_type) {
+                switch (sns_type) {
+                    case "naver": window.name = "n_login"; break;
+                    case "kakao": window.name = "k_login"; break;
+                    case "facebook": window.name = "f_login"; break;
+                    case "google": window.name = "g_login"; break;
+                }
+                $("#sns_type").val(sns_type);
+                $("form[name='test']").submit();
+            }
+        </script>
+
+        <div class="footer">
+            <div class="group inner">
+                <address>
+                    인투라온호텔<span class="space"></span> 강원도 정선군 사북읍 지장천로 583 <span class="space"></span> 대표전화 1644-1243
+                </address>
+                <p class="copyr">Copyright &#9400;INTORAON . ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+        <!-- /.footer -->
+    </div>
+
+</body>
+
+</html>

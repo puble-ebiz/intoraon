@@ -1,4 +1,4 @@
-<!-- 단체예약 랜딩페이지: 육상경기선수권대회 -->
+<!-- 단체예약 랜딩페이지: 여자오픈 2021 골프대회 -->
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -193,9 +193,9 @@
             </div>
         </div>
 
-        <!-- 2021.06.24 육상경기선수권대회 추가 -->
+        <!-- 이미지변경 -->
         <div class="group-event">
-            <img src="http://img.intoraon.co.kr/group/group_running.jpg" border="0" usemap="#consult-map"
+            <img id="" src="http://img.intoraon.co.kr/group/university_football.jpg" border="0" usemap="#consult-map"
                 alt="육상경기선수권대회" style="width: 100%;">
         </div>
 
@@ -209,20 +209,21 @@
         <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
         <script>
             $(function () {
-                $('.group-event img[usemap]').rwdImageMaps();
+                //$('.group-event img[usemap]').rwdImageMaps();
+                $('img#consult-map').rwdImageMaps();
                 $(".group-event img").width("100%");
                 $(window).resize(function () {
                     var winWidth = window.innerWidth,
                         eventImg = $('.group-event img')
                     if (winWidth < 991) {
-                        eventImg.attr('src', 'http://img.intoraon.co.kr/group/group_running_m.jpg')
+                        eventImg.attr('src', 'http://img.intoraon.co.kr/group/university_football_m.jpg')
                     } else {
-                        eventImg.attr('src', 'http://img.intoraon.co.kr/group/group_running.jpg')
+                        eventImg.attr('src', 'http://img.intoraon.co.kr/group/university_football.jpg')
                     }
                 }).resize();
             });
         </script>
-        <!-- //2021.06.24 육상경기선수권대회 추가 -->
+        <!-- //이미지변경 -->
         <div class="sub group_box container">
 
             <div class="sub_item_box">
@@ -234,9 +235,9 @@
                                     <strong>단체행사를 계획하고 있으신가요?</strong><br> 모든것이 완벽한 인투라온호텔에서 <br>아름다운 추억을 만들어 드립니다.
                                 </p>
                                 <div class="d-map">
-                                    <!-- 2021.06.24 이미지변경 -->
-                                    <img src="http://img.intoraon.co.kr/group/running_mapImg.jpg" alt="주변지도" />
-                                    <!-- //2021.06.24 이미지변경 -->
+                                    <!-- 맵 이미지변경 -->
+                                    <img src="http://img.intoraon.co.kr/group/football_mapImg.jpg" alt="주변지도" />
+                                    <!-- //맵 이미지변경 -->
                                 </div>
                                 <p class="p-2">
                                     인투라온호텔에서는 편안하고 안락한 객실은 물론
